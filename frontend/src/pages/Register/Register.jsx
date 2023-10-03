@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import userContext from '../../context/userContext'
+// import userContext from '../../context/userContext'
 
 import './Register.css'
 
 function Register() {
-  const { success, registerUser } = useContext(userContext)
+  // const { success, registerUser } = useContext(userContext)
 
   const navigate = useNavigate()
 
@@ -48,12 +48,12 @@ function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    registerUser(text, pass)
-    if (success) {
-      navigate('/user')
-    } else {
-      navigate('/register')
-    }
+    // registerUser(text, pass)
+    // if (success) {
+    //   navigate('/user')
+    // } else {
+    //   navigate('/register')
+    // }
   }
   return (
     <div className='register-page'>
