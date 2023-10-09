@@ -15,6 +15,9 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  Checkbox,
+  CheckboxGroup,
+  Input,
 } from '@chakra-ui/react'
 
 import './Register.css'
@@ -44,28 +47,42 @@ function RegisterInv() {
                 <GridItem
                   rowSpan={1}
                   colSpan={2}
-                  bg='tomato'
-                />
-                <GridItem
-                  colSpan={2}
-                  bg='papayawhip'
-                />
-                <GridItem
-                  colSpan={2}
-                  bg='papayawhip'
-                />
-                <GridItem
-                  colSpan={2}
-                  bg='tomato'
-                />
-                <GridItem
-                  colSpan={2}
-                  bg='tomato'
-                />
-                <GridItem
-                  colSpan={2}
-                  bg='papayawhip'
-                />
+                >
+                  <FormControl isRequired>
+                    <FormLabel>Email address</FormLabel>
+                    <Input
+                      type='email'
+                      isRequired
+                    />
+                    <FormHelperText>
+                      We'll never share your email.
+                    </FormHelperText>
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Organization Name</FormLabel>
+                    <Input type='text' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Password</FormLabel>
+                    <Input type='Password' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Organization Size</FormLabel>
+                    <Input type='Number' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Founder Name</FormLabel>
+                    <Input type='text' />
+                  </FormControl>
+                </GridItem>
               </Grid>
               <div className='startup_buttons_page_1'>
                 <Button
@@ -84,7 +101,68 @@ function RegisterInv() {
               </div>
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Grid
+                marginTop={6}
+                h='20rem'
+                templateRows='repeat(3, 1fr)'
+                templateColumns='repeat(4, 1fr)'
+                gap={6}
+              >
+                <GridItem
+                  rowSpan={1}
+                  colSpan={2}
+                >
+                  <FormControl isRequired>
+                    <FormLabel>Business ID</FormLabel>
+                    <Input
+                      type='email'
+                      isRequired
+                    />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Linked In Profile</FormLabel>
+                    <Input type='text' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Approximate Valuation</FormLabel>
+                    <Input type='Number' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Seeking Funds Amount?</FormLabel>
+                    <Input type='Number' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <FormControl isRequired>
+                    <FormLabel>Founder Name</FormLabel>
+                    <Input type='text' />
+                  </FormControl>
+                </GridItem>
+                <GridItem colSpan={2}>
+                  <Checkbox iconSize='3rem'>GST Registered?</Checkbox>
+                </GridItem>
+              </Grid>
+              <div className='startup_buttons_page_1'>
+                <Button
+                  colorScheme='blue'
+                  size='lg'
+                  variant='outline'
+                >
+                  Back
+                </Button>
+                <Button
+                  colorScheme='blue'
+                  size='lg'
+                >
+                  Next
+                </Button>
+              </div>
             </TabPanel>
           </TabPanels>
         </Tabs>

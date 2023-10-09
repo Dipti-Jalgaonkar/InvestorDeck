@@ -1,7 +1,6 @@
 import './App.css'
 import Register from './pages/Register/RegisterStartup'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import ImageSlider from './components/ImageSlider/ImageSlider'
 
 function App() {
   const slides = [
@@ -26,22 +25,13 @@ function App() {
       title: 'forest',
     },
   ]
-  // https://startupsmagazine.co.uk/sites/default/files/2020-11/AdobeStock_376814606.jpg
-  //https://www.forbesindia.com/media/images/2022/Aug/img_192695_corporateventurecapital.jpg
-  //https://unblast.com/wp-content/uploads/2021/10/Signing-Contract-Illustration.jpg
+
   const containerStyles = {
     width: '98%',
     height: '800px',
     margin: '0 auto',
   }
-  // return (
-  //   <div>
-  //     <h1>Hello monsterlessons</h1>
-  //     <div style={containerStyles}>
-  //       <ImageSlider slides={slides} />
-  //     </div>
-  //   </div>
-  // )
+
   return (
     <>
       <Router>
