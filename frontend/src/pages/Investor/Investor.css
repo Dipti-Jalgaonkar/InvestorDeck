@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.investmain-container {
+    max-width: 100%;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    ;
+    justify-content: center;
+    align-items: center;
+    background-color: #02457A;
+    box-shadow: 1px 1px 9px 2px #4187c0 inset;
+}
+
+.investhead-div {
+    text-align: center;
+    width: 1000px;
+}
+
+.investhead-div h1 {
+    padding: 0px;
+    color: #D6E7EE;
+    margin: 0px 0px 20px 0px;
+}
+
+.investhead-div button {
+    padding: 15px 30px 15px 30px;
+    background-color: #7fcced;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 9px 2px #3893ba;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.investhead-div button:hover {
+    background-color: #45b6e7;
+}
+
+.investhead-div a {
+    text-decoration: none;
+    color: #03345c;
+}
+
+.investworking-container {
+    height: 350px;
+    padding: 20px;
+    position: relative;
+    background-color: rgb(168, 210, 247);
+    box-shadow: 1px 1px 9px 3px #51b4df inset;
+}
+
+.investworking-heading {
+    color: #001B48;
+    text-align: center;
+}
+
+.investsteps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    top: 150px;
+    padding: 0px 30px 0px 0px;
+}
+
+.investsteps {
+    box-shadow: 1px 1px 9px 2px #011f38;
+    align-content: center;
+    flex: 1 1 0;
+    font-size: 20px;
+    background-color: #02325a;
+    padding: 20px;
+    border-radius: 20px 20px 20px 20px;
+    color: rgb(210, 231, 248);
+}
+
+.investsteps img {
+    box-shadow: 1px 1px 9px 2px rgb(191, 220, 244);
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    left: 120px;
+    padding: 10px;
+    background-color: rgb(210, 231, 248);
+}
+
+.investsteps h3 {
+    text-align: center;
+}
+
+.investsteps p {
+    text-align: center;
+}
+
+#investcontainer {
+    position: relative;
+    top: 0px;
+    height: 1000px;
+    width: 90=100%;
+    background-color: #C8F2FC;
+    position: relative;
+    padding: 200px 0px 0px 0px;
+    text-align: center;
+    z-index: -1;
+    box-shadow: 1px 1px 9px 3px #8fe1f6 inset;
+}
+
+.investtext1 {
+    margin-bottom: 0px;
+    color: #02325a;
+    font-size: 40px;
+    padding: 0px;
+    text-align: center;
+}
+
+.investtext2,
+.investtext3 {
+    padding: 0px;
+    font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    color: #02325a;
+}
+
+#investcontainer img {
+    width: 80%;
+    position: absolute;
+    align-self: center;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#investcontainer button {
+    padding: 20px 45px 20px 45px;
+    background-color: #346eca;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    position: absolute;
+    top: 36%;
+    left: 42%;
+    right: 42%;
+    transition: backgroundcolor 0.5s;
+}
+
+#investcontainer a {
+    text-decoration: none;
+    color: white;
+}
+
+#investcontainer button:hover {
+    background-color: #175dcf;
+}
+
+@keyframes investbounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-40px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    60% {
+        transform: translateY(-20px);
+    }
+
+    80% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.investbounce {
+    animation: investbounce 1s;
+}
