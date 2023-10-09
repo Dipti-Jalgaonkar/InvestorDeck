@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.workwork-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 50px 30px 50px;
+    background-color: rgb(220, 236, 250);
+    box-shadow: 1px 1px 9px 3px rgb(201, 227, 249) inset;
+}
+
+.workwork-text {
+    flex: 2 1 0;
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+    color: #001B48;
+}
+
+.workwork-text h1 {
+    padding: 0px;
+    margin: 0px;
+}
+
+.workwork-text p {
+    font-size: 20px;
+}
+
+.workstartup-btn {
+    position: relative;
+    font-size: 16px;
+    padding: 15px 20px 15px 20px;
+    background-color: #001B48;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: backgroundColor 0.5s;
+    box-shadow: 1px 1px 9px 2px #335081;
+}
+
+.workstartup-btn:hover {
+    background-color: #012b73;
+}
+
+.workinvest-btn {
+    position: relative;
+    font-size: 16px;
+    padding: 15px 20px 15px 20px;
+    background-color: #001B48;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: backgroundColor 0.5s;
+    position: relative;
+    left: 15px;
+    box-shadow: 1px 1px 9px 2px #335081;
+}
+
+.workinvest-btn:hover {
+    background-color: #012b73;
+}
+
+.workwork-option1 {
+    flex: 1 1 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.workwork-join {
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
+    color: #001B48;
+    font-size: 20px;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 18px;
+
+}
+
+.workwork-choose {
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
+    color: #001B48;
+    font-size: 20px;
+    ;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10px;
+
+}
+
+.workwork-option2 {
+    flex: 1 1 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.workwork-invest {
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
+    color: #001B48;
+    font-size: 20px;
+    ;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10px;
+
+}
+
+.workwork-startup {
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
+    color: #001B48;
+    font-size: 20px;
+    ;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10px;
+}
+
+.workwork-heads {
+    padding: 10px;
+    margin: 0px;
+}
+
+.workwork-para {
+    padding: 5px;
+    margin: 0px;
+}
+
+.workwork-icon {
+    box-shadow: 1px 1px 9px 2px rgb(189, 220, 248);
+    background-color: rgb(220, 236, 250);
+    border-radius: 30%;
+    padding: 10px;
+}

@@ -1,13 +1,14 @@
 import React from 'react'
-import Slider from '../../components/Slider/Slider'
+import Slider1 from '../../components/Slider/Slider'
 import Card from '../../components/Card/Card'
-import { Switch, Route } from "react-router-dom";
+import Work from '../../components/Work/Work'
 
 function Main() {
   return (
     <>
-    <Slider/>
+    <Slider1/>
     <Card/>
+    <Work/>
     </>
   )
 }
