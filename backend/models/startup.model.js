@@ -23,6 +23,10 @@ const startupSchema = mongoose.Schema({
   },
   currentInvestors: [
     {
+      investor_id: {
+        type: mongoose.ObjectId,
+        required: true,
+      },
       investor_name: {
         type: String,
         required: [true, 'Please enter a name for your organization'],
