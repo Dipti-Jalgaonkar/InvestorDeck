@@ -23,10 +23,17 @@ body {
     width: 1000px;
 }
 
-.investhead-div h1 {
+.investhead-div h1,
+.investhead-div h2 {
     padding: 0px;
     color: #D6E7EE;
     margin: 0px 0px 20px 0px;
+    font-size: 2rem;
+}
+
+.investhead-div h2 {
+    font-size: 1rem;
+    margin-top: 0px;
 }
 
 .investhead-div button {
@@ -60,6 +67,9 @@ body {
 .investworking-heading {
     color: #001B48;
     text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 2rem;
 }
 
 .investsteps-container {
@@ -132,12 +142,13 @@ body {
 }
 
 #investcontainer img {
-    width: 80%;
+    width: 65%;
     position: absolute;
     align-self: center;
     top: 68%;
     left: 50%;
     transform: translate(-50%, -50%);
+    height: 38rem;
 }
 
 #investcontainer button {
@@ -195,4 +206,5 @@ body {
 
 .investbounce {
     animation: investbounce 1s;
+    margin-top: 50px;
 }

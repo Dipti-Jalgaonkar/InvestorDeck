@@ -8,6 +8,9 @@ function Main() {
   return (
     <>
     <Slider1/>
+    <div className='main-div'>
+    <p>Angel investors focus on helping startups take their first steps rather than getting a favorable return on a loan.</p>
+    </div>
     <Card/>
     <Work/>
     <Client/>

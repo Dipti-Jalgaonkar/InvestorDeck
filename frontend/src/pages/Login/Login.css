@@ -1,5 +1,5 @@
 .login {
-  width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   display: flex;
   font-family: 'Roboto Slab', serif;
@@ -59,7 +59,7 @@
   margin-bottom: 2rem;
 }
 
-.login-element > label {
+.login-element>label {
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
@@ -92,6 +92,7 @@
   background-color: #3687ff;
   transition: all 0.3s;
 }
+
 .btn-primary:hover {
   background-color: #0066ff;
 }

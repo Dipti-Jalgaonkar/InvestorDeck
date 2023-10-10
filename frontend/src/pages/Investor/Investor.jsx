@@ -5,6 +5,7 @@ import solid1 from '../../assets/1-solid.svg'
 import solid2 from '../../assets/2-solid.svg'
 import solid3 from '../../assets/3-solid.svg'
 import solid4 from '../../assets/4-solid.svg'
+import { Link } from 'react-router-dom';
 
 export default function Investor() {
   return (
@@ -13,8 +14,8 @@ export default function Investor() {
         
         <div className="investhead-div">
             <h1>Welcome to the world of opportunities and financial growth. </h1>
-            <h1>Explore the possibilities, discover your path, and embark on your journey to investment success with Investor's Deck.</h1>
-            <button><a href="">Start Investing</a></button>
+            <h2>Explore the possibilities, discover your path, and embark on your journey to investment success with Investor's Deck.</h2>
+            <button><a href=""><Link to='/register'>Start Investing</Link></a></button>
         </div>
         
     </div>

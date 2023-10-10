@@ -22,7 +22,7 @@ import {
 
 import './Register.css'
 
-function RegisterInv() {
+function RegisterStart() {
   const [form, setForm] = useState({
     email: '',
     password: '',
