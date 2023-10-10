@@ -12,8 +12,9 @@ body {
     align-items: center;
     gap: 30px;
     padding: 30px 50px 30px 50px;
-    background-color: rgb(220, 236, 250);
-    box-shadow: 1px 1px 9px 3px rgb(201, 227, 249) inset;
+    background-color: #D6E7EE;
+    /* background-color: rgb(220, 236, 250); */
+    /* box-shadow: 1px 1px 9px 3px rgb(201, 227, 249) inset; */
 }
 
 .workwork-text {
@@ -25,11 +26,15 @@ body {
 
 .workwork-text h1 {
     padding: 0px;
+    padding-bottom: 3rem;
     margin: 0px;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .workwork-text p {
     font-size: 20px;
+    padding-bottom: 1.8rem;
 }
 
 .workstartup-btn {
@@ -42,6 +47,7 @@ body {
     border: none;
     transition: backgroundColor 0.5s;
     box-shadow: 1px 1px 9px 2px #335081;
+    margin-top: 1rem;
 }
 
 .workstartup-btn:hover {
@@ -60,6 +66,7 @@ body {
     position: relative;
     left: 15px;
     box-shadow: 1px 1px 9px 2px #335081;
+    margin-top: 1rem;
 }
 
 .workinvest-btn:hover {
@@ -82,7 +89,10 @@ body {
     font-size: 20px;
     text-align: center;
     background-color: aliceblue;
-    padding: 18px;
+    padding: 3.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -92,10 +102,13 @@ body {
     box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
     color: #001B48;
     font-size: 20px;
-    ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     background-color: aliceblue;
-    padding: 10px;
+    padding: 3.3rem;
 
 }
 
@@ -113,10 +126,13 @@ body {
     box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
     color: #001B48;
     font-size: 20px;
-    ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     background-color: aliceblue;
-    padding: 10px;
+    padding: 2.8rem;
 
 }
 
@@ -125,10 +141,13 @@ body {
     box-shadow: 1px 1px 9px 2px rgb(190, 223, 252);
     color: #001B48;
     font-size: 20px;
-    ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     background-color: aliceblue;
-    padding: 10px;
+    padding: 2.8rem;
 }
 
 .workwork-heads {

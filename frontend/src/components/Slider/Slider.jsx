@@ -25,7 +25,7 @@ function Slider() {
     // showSlides();
 
   return (
-    <>
+    <div className='slide-cont'>
     
       <div className="slideshow-container">
 
@@ -51,7 +51,7 @@ function Slider() {
 <span className="dot"></span>
 <span className="dot"></span>
 </div>
-  </>
+  </div>
   )
 }
 

@@ -22,7 +22,7 @@ import {
 
 import './Register.css'
 
-function RegisterInv() {
+function RegisterStart() {
   return (
     <div className='startup_wrap'>
       <div className='startup_register'>
@@ -171,4 +171,4 @@ function RegisterInv() {
   )
 }
 
-export default RegisterInv
+export default RegisterStart

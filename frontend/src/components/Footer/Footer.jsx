@@ -22,7 +22,7 @@ function Footer() {
                 Whether you're a startup seeking funding or an investor looking for opportunities, we're here to help you navigate the world of finance and achieve your goals.
             </p>
         </div>
-        <div id="quicklinks">
+        <div id="footerquicklinks">
             <p>Quick Links</p>
             <ul>
                 <li><a href="">FAQs</a></li>
@@ -34,7 +34,7 @@ function Footer() {
         </div>
         <div id="footerfollowus">
             <p>Follow us on:</p>
-            <div className="followus-div">
+            <div className="footerfollowus-div">
                 <a href=""><img src={facebook} alt="facebook"/></a>
                 <a href=""><img src={instagram} alt="instagram"/></a>
                 <a href=""><img src={linkedin} alt="linkdin"/></a>
