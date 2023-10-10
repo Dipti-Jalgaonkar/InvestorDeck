@@ -195,4 +195,4 @@ function RegisterInv() {
   )
 }
 
-export default RegisterInv
+export default RegisterStart
