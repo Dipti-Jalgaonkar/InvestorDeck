@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import authContext from '../../context/auth'
 import {
   FormControl,
   FormLabel,
@@ -31,12 +32,32 @@ function RegisterInv() {
     valuation: 0,
   })
 
+  const { registerUser, success } = useContext(authContext)
+
+  const navigate = useNavigate()
+
   const onChange = (e) => {
     setForm((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }))
   }
+
+  const handleSubmit = async () => {
+    await registerUser(
+      form.org_name,
+      form.email,
+      form.password,
+      form.org_size,
+      form.valuation
+    )
+    if (success) {
+      navigate('/main')
+    } else {
+      navigate('/')
+    }
+  }
+
   return (
     <div className='startup_wrap'>
       <div className='startup_register'>
@@ -67,7 +88,9 @@ function RegisterInv() {
                     <Input
                       type='email'
                       isRequired
+                      id='email'
                       value={form.email}
+                      onChange={onChange}
                     />
                     <FormHelperText>
                       We'll never share your email.
@@ -80,6 +103,8 @@ function RegisterInv() {
                     <Input
                       type='text'
                       value={form.org_name}
+                      onChange={onChange}
+                      id='org_name'
                     />
                   </FormControl>
                 </GridItem>
@@ -89,6 +114,8 @@ function RegisterInv() {
                     <Input
                       type='Password'
                       value={form.password}
+                      onChange={onChange}
+                      id='password'
                     />
                   </FormControl>
                 </GridItem>
@@ -98,6 +125,8 @@ function RegisterInv() {
                     <Input
                       type='Number'
                       value={form.org_size}
+                      onChange={onChange}
+                      id='org_size'
                     />
                   </FormControl>
                 </GridItem>
@@ -153,7 +182,12 @@ function RegisterInv() {
                 <GridItem colSpan={2}>
                   <FormControl isRequired>
                     <FormLabel>Approximate Valuation</FormLabel>
-                    <Input type='Number' />
+                    <Input
+                      type='Number'
+                      value={form.valuation}
+                      onChange={onChange}
+                      id='valuation'
+                    />
                   </FormControl>
                 </GridItem>
                 <GridItem colSpan={2}>
@@ -180,12 +214,7 @@ function RegisterInv() {
                 >
                   Back
                 </Button>
-                <Button
-                  colorScheme='blue'
-                  size='lg'
-                >
-                  Next
-                </Button>
+                <button onClick={handleSubmit}>Submit</button>
               </div>
             </TabPanel>
           </TabPanels>
@@ -195,4 +224,4 @@ function RegisterInv() {
   )
 }
 
-export default RegisterStart
+export default RegisterInv
