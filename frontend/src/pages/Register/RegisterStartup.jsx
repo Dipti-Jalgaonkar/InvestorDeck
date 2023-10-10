@@ -23,6 +23,20 @@ import {
 import './Register.css'
 
 function RegisterInv() {
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+    org_name: '',
+    org_size: 0,
+    valuation: 0,
+  })
+
+  const onChange = (e) => {
+    setForm((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }))
+  }
   return (
     <div className='startup_wrap'>
       <div className='startup_register'>
@@ -53,6 +67,7 @@ function RegisterInv() {
                     <Input
                       type='email'
                       isRequired
+                      value={form.email}
                     />
                     <FormHelperText>
                       We'll never share your email.
@@ -62,19 +77,28 @@ function RegisterInv() {
                 <GridItem colSpan={2}>
                   <FormControl isRequired>
                     <FormLabel>Organization Name</FormLabel>
-                    <Input type='text' />
+                    <Input
+                      type='text'
+                      value={form.org_name}
+                    />
                   </FormControl>
                 </GridItem>
                 <GridItem colSpan={2}>
                   <FormControl isRequired>
                     <FormLabel>Password</FormLabel>
-                    <Input type='Password' />
+                    <Input
+                      type='Password'
+                      value={form.password}
+                    />
                   </FormControl>
                 </GridItem>
                 <GridItem colSpan={2}>
                   <FormControl isRequired>
                     <FormLabel>Organization Size</FormLabel>
-                    <Input type='Number' />
+                    <Input
+                      type='Number'
+                      value={form.org_size}
+                    />
                   </FormControl>
                 </GridItem>
                 <GridItem colSpan={2}>
