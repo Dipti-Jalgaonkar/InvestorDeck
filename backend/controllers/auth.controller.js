@@ -26,6 +26,7 @@ const regController = asyncHandler(async (req, res) => {
       password: hashedPassword,
     })
     res.status(201).json({
+      success: true,
       id: user._id,
       name: user.name,
       email: user.email,
@@ -41,6 +42,7 @@ const loginController = asyncHandler(async (req, res) => {
 
   if (userExists && (await bcrypt.compare(password, userExists.password))) {
     res.status(201).json({
+      success: true,
       id: userExists._id,
       name: userExists.name,
       email: userExists.email,
@@ -49,6 +51,7 @@ const loginController = asyncHandler(async (req, res) => {
     })
   } else {
     res.status(404).json({
+      success: false,
       message: 'Invalid Credentials',
     })
   }
@@ -67,6 +70,7 @@ const startupLoginController = asyncHandler(async (req, res) => {
         (await bcrypt.compare(password, emailExists.password))
       ) {
         res.status(200).json({
+          success: true,
           id: emailExists._id,
           name: emailExists.name,
           email: emailExists.email,
@@ -75,6 +79,7 @@ const startupLoginController = asyncHandler(async (req, res) => {
         })
       } else {
         res.status(404).json({
+          success: false,
           message: 'Invalid Credentials',
         })
       }
@@ -109,6 +114,7 @@ const startupRegController = asyncHandler(async (req, res) => {
           valuation,
         })
         res.status(201).json({
+          success: true,
           id: startup._id,
           name: startup.name,
           email: startup.email,

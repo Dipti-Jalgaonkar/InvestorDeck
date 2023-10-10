@@ -1,9 +1,37 @@
 import React from 'react'
 import './Login.css'
 import auth from '../../assets/log.jpg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { useState, useContext } from 'react'
+import authContext from '../../context/auth'
 
 function Login() {
+  const [form, setForm] = useState({
+    email: '',
+    password: '',
+  })
+
+  const onChange = (e) => {
+    setForm((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value,
+    }))
+  }
+
+  const navigate = useNavigate()
+
+  const { loginUser, success } = useContext(authContext)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    loginUser(form.email, form.password)
+    if (success) {
+      navigate('/main')
+    } else {
+      navigate('/main')
+    }
+  }
+
   return (
     <div className='login'>
       <div className='login-image'>
@@ -26,6 +54,8 @@ function Login() {
             <input
               type='email'
               className='login-element-input'
+              id='email'
+              onChange={onChange}
             />
           </div>
           <div className='login-element'>
@@ -33,9 +63,16 @@ function Login() {
             <input
               type='password'
               className='login-element-input'
+              id='password'
+              onChange={onChange}
             />
           </div>
-          <button className='btn btn-primary'>Login</button>
+          <button
+            className='btn btn-primary'
+            onClick={handleSubmit}
+          >
+            Login
+          </button>
         </div>
         <div className='login-footer'>
           Don't have an account? <Link>Sign Up</Link>
