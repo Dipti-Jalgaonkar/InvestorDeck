@@ -54,7 +54,7 @@ function RegisterInv() {
     if (success) {
       navigate('/main')
     } else {
-      navigate('/')
+      navigate('/main')
     }
   }
 

@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }) => {
     body.append('email', email)
     body.append('password', pass)
 
-    const response = await fetch(`http://localhost:5000/api/users/login`, {
+    const response = await fetch(`http://localhost:5000/api/startup/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -50,6 +50,11 @@ export const AuthProvider = ({ children }) => {
 
     const data = await response.json()
     console.log(data)
+    if (data.success) {
+      setSuccess(true)
+    } else {
+      setSuccess(false)
+    }
   }
 
   return (
