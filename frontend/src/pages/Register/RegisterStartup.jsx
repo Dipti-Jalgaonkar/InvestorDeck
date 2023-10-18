@@ -224,4 +224,4 @@ function RegisterStart() {
   )
 }
 
-export default RegisterInv
+export default RegisterStart

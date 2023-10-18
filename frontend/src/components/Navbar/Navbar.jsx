@@ -1,19 +1,23 @@
-import React, { useState } from "react";
-import "./Navbar.css";
+import React, { useState } from 'react'
+import './Navbar.css'
 import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaYoutubeSquare,
-} from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+} from 'react-icons/fa'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { AiOutlineUser } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
-  const [showMediaIcons, setShowMediaIcons] = useState(false);
+  const logOut = () => {
+    localStorage.removeItem('user')
+  }
+  const [showMediaIcons, setShowMediaIcons] = useState(false)
   return (
     <>
-      <nav className="main-nav">
-        <div className="logo">
+      <nav className='main-nav'>
+        <div className='logo'>
           <h2>
             <span>T</span>hapa
             <span>T</span>echnical
@@ -22,56 +26,63 @@ const Navbar = () => {
 
         <div
           className={
-            showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"
-          }>
+            showMediaIcons ? 'menu-link mobile-menu-link' : 'menu-link'
+          }
+        >
           <ul>
             <li>
-              <Link to="/main">Home</Link>
+              <Link to='/main'>Home</Link>
             </li>
             <li>
-              <Link to="/about">about</Link>
+              <Link to='/about'>about</Link>
             </li>
             <li>
-              <Link to="/main">services</Link>
+              <Link to='/main'>services</Link>
             </li>
             <li>
-              <Link to="/main">contact</Link>
+              <Link to='/main'>contact</Link>
             </li>
           </ul>
         </div>
-        <div className="social-media">
-          <ul className="social-media-desktop">
+        <div className='social-media'>
+          <ul className='social-media-desktop'>
+            <li>
+              <div
+                className='user'
+                onClick={logOut}
+              >
+                <AiOutlineUser />
+              </div>
+            </li>
             <li>
               <a
-                href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                target="_thapa">
-                <FaFacebookSquare className="facebook" />
+                href='https://www.instagram.com/thapatechnical/'
+                target='_thapa'
+              >
+                <FaInstagramSquare className='instagram' />
               </a>
             </li>
             <li>
               <a
-                href="https://www.instagram.com/thapatechnical/"
-                target="_thapa">
-                <FaInstagramSquare className="instagram" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                target="_thapa">
-                <FaYoutubeSquare className="youtube" />
+                href='https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA'
+                target='_thapa'
+              >
+                <FaYoutubeSquare className='youtube' />
               </a>
             </li>
           </ul>
-          <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
+          <div className='hamburger-menu'>
+            <a
+              href='#'
+              onClick={() => setShowMediaIcons(!showMediaIcons)}
+            >
               <GiHamburgerMenu />
             </a>
           </div>
         </div>
       </nav>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
