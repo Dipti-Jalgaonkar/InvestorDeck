@@ -26,6 +26,7 @@ body {
     margin: 0px 0px 0px 150px;
     background: linear-gradient(to right, #023c7b, #0c5c9d);
     border-radius: 20px;
+    color: azure;
 }
 
 #cardinvestor h2 {
@@ -75,6 +76,7 @@ body {
     margin: 00px 150px 0px 0px;
     background: linear-gradient(to right, #023c7b, #0c5c9d);
     border-radius: 20px;
+    color: azure;
 }
 
 #cardstartup h2 {

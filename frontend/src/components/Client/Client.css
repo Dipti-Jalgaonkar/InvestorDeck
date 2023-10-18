@@ -17,7 +17,7 @@
 
 .client-heading h3 {
     font-size: 2rem;
-    color: #001B48;
+    color: #04132e;
     font-weight: 700;
     letter-spacing: 0.5px;
 }
@@ -31,12 +31,17 @@
 }
 
 .client-box {
-    background-color: #ffffff;
+    background-color: aliceblue;
     padding: 30px 20px;
     border: 1px solid #f1f1f1;
     box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.05);
     border-radius: 0px 30px 0px 30px;
     height: 22rem;
+    color: #001B48;
+}
+
+.client-info {
+    color: #001B48;
 }
 
 .client-profile {
@@ -60,13 +65,13 @@
 }
 
 .clientprofile-text strong {
-    color: #393939;
     font-size: 1.5rem;
     font-weight: 600;
+    color: #001B48;
 }
 
 .clientprofile-text span {
-    color: #949494;
+    color: rgb(142, 175, 185);
     font-weight: 500;
     font-size: 1.1rem;
 
@@ -84,5 +89,5 @@
 }
 
 .client-box p {
-    color: #7c7c7c;
+    color: #001B48;
 }

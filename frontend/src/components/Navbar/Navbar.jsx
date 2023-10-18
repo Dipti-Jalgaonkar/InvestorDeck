@@ -6,7 +6,6 @@ import {
   FaYoutubeSquare,
 } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { AiOutlineUser } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -19,8 +18,8 @@ const Navbar = () => {
       <nav className='main-nav'>
         <div className='logo'>
           <h2>
-            <span>T</span>hapa
-            <span>T</span>echnical
+            <span>I</span>nvestor
+            <span>D</span>eck
           </h2>
         </div>
 
@@ -47,12 +46,12 @@ const Navbar = () => {
         <div className='social-media'>
           <ul className='social-media-desktop'>
             <li>
-              <div
-                className='user'
-                onClick={logOut}
+              <a
+                href='https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA'
+                target='_thapa'
               >
-                <AiOutlineUser />
-              </div>
+                <FaFacebookSquare className='facebook' />
+              </a>
             </li>
             <li>
               <a
