@@ -7,6 +7,7 @@ import {
 } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import logo1 from "../../assets/logo.png"
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -15,8 +16,8 @@ const Navbar = () => {
       <nav className="main-nav">
         <div className="logo">
           <h2>
-            <span>T</span>hapa
-            <span>T</span>echnical
+            <span>I</span>nvestor
+            <span>D</span>eck
           </h2>
         </div>
 
@@ -26,13 +27,16 @@ const Navbar = () => {
           }>
           <ul>
             <li>
-              <Link to="/main">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/about">about</Link>
             </li>
             <li>
-              <Link to="/main">services</Link>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/investor">Investor</Link>
             </li>
             <li>
               <Link to="/main">contact</Link>
@@ -45,29 +49,10 @@ const Navbar = () => {
               <a
                 href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
                 target="_thapa">
-                <FaFacebookSquare className="facebook" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/thapatechnical/"
-                target="_thapa">
-                <FaInstagramSquare className="instagram" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
-                target="_thapa">
-                <FaYoutubeSquare className="youtube" />
+                <img className='logo1' src={logo1}/>
               </a>
             </li>
           </ul>
-          <div className="hamburger-menu">
-            <a href="#" onClick={() => setShowMediaIcons(!showMediaIcons)}>
-              <GiHamburgerMenu />
-            </a>
-          </div>
         </div>
       </nav>
     </>

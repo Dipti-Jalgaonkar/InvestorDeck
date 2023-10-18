@@ -7,6 +7,8 @@ import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
 import Login from './pages/Login/Login'
 import RegisterStart from './pages/Register/RegisterStartup'
+import Startup from './pages/Startup/Startup'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route
-            path='/main'
+            path='/'
             Component={Main}
             element={<Main />}
           />
@@ -33,6 +35,11 @@ function App() {
             path='/investor'
             Component={Investor}
             element={<Investor />}
+          />
+          <Route
+            path='/startup'
+            Component={Startup}
+            element={<Startup />}
           />
           <Route
             path='/register'

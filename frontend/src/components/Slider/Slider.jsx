@@ -1,58 +1,46 @@
-
 import React from 'react'
+
+import Carousel from 'react-bootstrap/Carousel';
 import './Slider.css'
 
-function Slider() {
-    let slideIndex = 0;
-
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) { slideIndex = 1 }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      setTimeout(showSlides, 2000); 
-    }
-    setTimeout(showSlides, 1000)
-    // showSlides();
-
+function UncontrolledExample() {
   return (
-    <div className='slide-cont'>
-    
-      <div className="slideshow-container">
-
-<div className="mySlides fade">
-  <img src="https://emotionalegghead.com/wp-content/uploads/2021/06/investmentemotionalegghead-scaled.jpg"/>
-</div>
-
-<div className="mySlides fade">
-  <img src="https://www.theindianwire.com/wp-content/uploads/2020/05/Startup.jpg"/>
-</div>
-
-<div className="mySlides fade">
-  <img src="https://d24uab5gycr2uz.cloudfront.net/uploads/other_pic/GkPFRMDxrh.png"/>
-</div>
-<div className="mySlides fade">
-  <img src="http://localhost:3000/dipti.jpg"/>
-</div>
-</div>
-
-<div className='No'>
-<span className="dot"></span>
-<span className="dot"></span>
-<span className="dot"></span>
-<span className="dot"></span>
-</div>
-  </div>
-  )
+    <Carousel>
+      <Carousel.Item>
+        <div className="slider-img1">
+      <img src='https://www.accountingforsustainability.org/content/a4s/corporate/en/knowledge-hub/webinars/webinar-recording-tcfd-2021/_jcr_content/par/pageteaser/image.img.jpg/1634035365275.jpg'/>
+      </div>     
+        {/* <ExampleCarouselImage text="First slide" /> */}
+        <Carousel.Caption>
+          <h3>Angel investors </h3>
+          <p>focus on helping startups take their first steps rather than getting a favorable return on a loan.</p>
+        </Carousel.Caption>
+   
+      </Carousel.Item>
+      <Carousel.Item>
+      <div className="slider-img1">
+      <img src="https://www.analyticsinsight.net/wp-content/uploads/2020/12/Data-Analyst-1024x576.jpg"/>
+      </div>
+        {/* <ExampleCarouselImage text="Second slide" /> */}
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <div className="slider-img1">
+      <img src="https://wallpaperaccess.com/full/3734602.jpg"/>
+      </div>
+        {/* <ExampleCarouselImage text="Third slide" /> */}
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+  );
 }
 
-export default Slider
+export default UncontrolledExample;

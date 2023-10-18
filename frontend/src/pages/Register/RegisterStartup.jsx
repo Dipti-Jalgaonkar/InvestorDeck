@@ -52,9 +52,9 @@ function RegisterStart() {
       form.valuation
     )
     if (success) {
-      navigate('/main')
+      navigate('/')
     } else {
-      navigate('/main')
+      navigate('/')
     }
   }
 
@@ -214,7 +214,15 @@ function RegisterStart() {
                 >
                   Back
                 </Button>
-                <button onClick={handleSubmit}>Submit</button>
+                {/* <button onClick={handleSubmit}>Submit</button> */}
+                <Button
+                  colorScheme='blue'
+                  size='lg'
+                  variant='outline'
+                  onClick={handleSubmit}
+                >
+                  Submit
+                </Button>
               </div>
             </TabPanel>
           </TabPanels>
@@ -224,4 +232,4 @@ function RegisterStart() {
   )
 }
 
-export default RegisterInv
+export default RegisterStart
