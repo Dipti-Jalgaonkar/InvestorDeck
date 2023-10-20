@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 import Login from './pages/Login/Login'
 import RegisterStart from './pages/Register/RegisterStartup'
 import Startup from './pages/Startup/Startup'
+import Profile from './pages/Profile/Profile'
 import ViewStartup from './pages/ViewStartup/ViewStartup'
 import authContext from './context/auth'
 import { useContext, useEffect } from 'react'
@@ -51,13 +52,14 @@ function App() {
             path='/about'
             element={<AboutUs />}
           />
-          <Route
-            path='/viewstartup'
-            element={<ViewStartup />}
-          />
+
           <Route
             path='/about'
             element={<AboutUs />}
+          />
+          <Route
+            path='/profile'
+            element={<Profile />}
           />
           <Route
             path='/test'
@@ -71,6 +73,10 @@ function App() {
           />
           {loggedIn && (
             <>
+              <Route
+                path='/viewstartup'
+                element={<ViewStartup />}
+              />
               <Route
                 path='/*'
                 element={<Main />}
