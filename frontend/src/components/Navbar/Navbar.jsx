@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const logOut = () => {
-    localStorage.removeItem('user')
+    window.localStorage.removeItem('user')
   }
   const [showMediaIcons, setShowMediaIcons] = useState(false)
   return (

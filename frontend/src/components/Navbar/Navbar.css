@@ -16,7 +16,6 @@ li {
 }
 
 /* 
- 
 
 /* navbar style start  */
 
@@ -39,7 +38,6 @@ li {
     /* background-color: #3b5998; */
     grid-column: 2/3;
     justify-content: start;
-    align-items: center;
 }
 
 .menu-link {
@@ -50,7 +48,6 @@ li {
     height: 10rem;
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .social-media {
@@ -61,7 +58,6 @@ li {
     height: 10rem;
     display: grid;
     grid-template-columns: 3fr repeat(3, 1fr);
-    align-items: center;
     justify-content: flex-end;
 }
 
@@ -131,7 +127,6 @@ li {
     height: 80vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
 }
 

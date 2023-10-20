@@ -90,4 +90,8 @@
 
 .client-box p {
     color: #001B48;
+    text-align: justify;
+    width: 470px;
+    font-size: 20px;
+    padding-left: 4px;
 }

@@ -12,8 +12,8 @@ function UncontrolledExample() {
       </div>     
         {/* <ExampleCarouselImage text="First slide" /> */}
         <Carousel.Caption>
-          <h3>Angel investors </h3>
-          <p>focus on helping startups take their first steps rather than getting a favorable return on a loan.</p>
+          <h3 className='carousel-head'>Welcome to Investor Deck</h3>
+          <p className='carousel-p'>Empowering Your Financial Future: Explore, Invest, and Innovate with Our Investment and Startup Platform!</p>
         </Carousel.Caption>
    
       </Carousel.Item>
@@ -23,8 +23,8 @@ function UncontrolledExample() {
       </div>
         {/* <ExampleCarouselImage text="Second slide" /> */}
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3 className='carousel-head'>Our Vision and Mission</h3>
+          <p className='carousel-p'>Our mission is to empower individuals and businesses to unlock their full financial potential and engage with the ever-evolving landscape of innovation.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -33,9 +33,9 @@ function UncontrolledExample() {
       </div>
         {/* <ExampleCarouselImage text="Third slide" /> */}
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          <h3 className='carousel-head'>Investment Opportunities</h3>
+          <p className='carousel-p'>
+          Grow Your Wealth: Explore Smart Investment Choices with Us
           </p>
         </Carousel.Caption>
       </Carousel.Item>
