@@ -12,6 +12,7 @@ import Startup from './pages/Startup/Startup'
 import ViewStartup from './pages/ViewStartup/ViewStartup'
 import authContext from './context/auth'
 import { useContext, useEffect } from 'react'
+import CardStartup from './components/CardStartup/CardStartup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
@@ -44,40 +45,43 @@ function App() {
         <Routes>
           <Route
             path='/'
-            Component={Main}
             element={<Main />}
           />
           <Route
             path='/about'
-            Component={AboutUs}
             element={<AboutUs />}
           />
           <Route
             path='/viewstartup'
-            Component={ViewStartup}
             element={<ViewStartup />}
           />
           <Route
             path='/about'
-            Component={AboutUs}
             element={<AboutUs />}
+          />
+          <Route
+            path='/test'
+            element={
+              <CardStartup
+                name='newCompany'
+                desc='NEWCOMPANY DESCRIBED HERE'
+                amount='2000'
+              />
+            }
           />
           {loggedIn && (
             <>
               <Route
                 path='/*'
-                Component={Main}
                 element={<Main />}
               />
 
               <Route
                 path='/investor'
-                Component={Investor}
                 element={<Investor />}
               />
               <Route
                 path='/startup'
-                Component={Startup}
                 element={<Startup />}
               />
             </>
@@ -86,12 +90,10 @@ function App() {
             <>
               <Route
                 path='/register'
-                Component={RegisterStart}
                 element={<RegisterStart />}
               />
               <Route
                 path='/login'
-                Component={Login}
                 element={<Login />}
               />
             </>
