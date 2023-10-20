@@ -1,7 +1,7 @@
 import React from 'react'
 import './ViewStartup.css'
 import { Grid, GridItem } from '@chakra-ui/react'
-import { Card, CardHeader, CardBody, CardFooter,Image, Stack, Heading, Text, Button } from '@chakra-ui/react'
+import CardStartup from '../../components/CardStartup/CardStartup'
 function ViewStartup() {
   return (
     <div className="view_container">
@@ -13,6 +13,7 @@ function ViewStartup() {
   gap={4}
 >
   <GridItem colSpan={2} bg='papayawhip' >
+    <CardStartup/>
   </GridItem>
   <GridItem colSpan={2} bg='papayawhip'></GridItem>
   <GridItem colSpan={2} bg='papayawhip'></GridItem>
