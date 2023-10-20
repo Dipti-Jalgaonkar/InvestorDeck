@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 import Login from './pages/Login/Login'
 import RegisterStart from './pages/Register/RegisterStartup'
 import Startup from './pages/Startup/Startup'
+import ViewStartup from './pages/ViewStartup/ViewStartup'
 import authContext from './context/auth'
 import { useContext, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -45,6 +46,16 @@ function App() {
             path='/'
             Component={Main}
             element={<Main />}
+          />
+          <Route
+            path='/about'
+            Component={AboutUs}
+            element={<AboutUs />}
+          />
+          <Route
+            path='/viewstartup'
+            Component={ViewStartup}
+            element={<ViewStartup />}
           />
           <Route
             path='/about'
