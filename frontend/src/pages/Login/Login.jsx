@@ -67,8 +67,18 @@ function Login() {
               onChange={onChange}
             />
           </div>
+          <div className='login-element'>
+            <label>Select Type of User: </label>
+            <select
+              className='login-element-input dropdown'
+              name=''
+            >
+              <option value='1'>Investor</option>
+              <option value='2'>Startup</option>
+            </select>
+          </div>
           <button
-            className='btn btn-primary'
+            className='btn2 btn-primary'
             onClick={handleSubmit}
           >
             Login

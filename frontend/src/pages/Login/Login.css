@@ -1,6 +1,6 @@
 .login {
   max-width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   font-family: 'Roboto Slab', serif;
 }
@@ -8,7 +8,7 @@
 .login-image {
   position: relative;
   width: 65vw;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
 }
 
@@ -59,7 +59,7 @@
   margin-bottom: 2rem;
 }
 
-.login-element>label {
+.login-element > label {
   font-size: 1.8rem;
   padding-bottom: 1rem;
 }
@@ -79,8 +79,8 @@
   outline: none;
 }
 
-.btn {
-  padding: 1.3rem 3.5rem;
+.btn2 {
+  padding: 0.8rem 1.4rem;
   border: 0;
   color: #fff;
   border-radius: 0.3rem;
@@ -103,4 +103,8 @@
   bottom: 2%;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.dropdown {
+  padding: 0.31rem;
 }
