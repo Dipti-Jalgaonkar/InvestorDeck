@@ -1,0 +1,9 @@
+.view_container {
+    height: 100vh;
+    padding: 2rem;
+}
+
+.view_h1 {
+    padding: 1rem;
+    font-weight: 600;
+}
