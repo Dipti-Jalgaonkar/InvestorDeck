@@ -6,6 +6,7 @@ const authContext = createContext()
 export const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [startups, setStartups] = useState([])
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
@@ -61,6 +62,23 @@ export const AuthProvider = ({ children }) => {
       window.localStorage.setItem('user_id', data.id)
     } else {
       setSuccess(false)
+    }
+  }
+
+  const getStartups = async () => {
+    try {
+      const response = await fetch(
+        'http://localhost:5000/api/startups/getStartups',
+        {
+          method: 'GET',
+        }
+      )
+
+      const data = await response.json()
+      console.log(data)
+      setStartups(data.startups)
+    } catch (err) {
+      console.log(err)
     }
   }
 
