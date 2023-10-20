@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv').config()
 const connectDB = require('./config/db.config')
 const authRoutes = require('./routes/auth.routes')
+const startupRoutes = require('./routes/startup.routes')
 const investmentRoutes = require('./routes/investment.routes')
 const cors = require('cors')
 
@@ -16,6 +17,8 @@ app.use(express.urlencoded({ extended: false }))
 connectDB()
 
 app.use(authRoutes)
+
+app.use(startupRoutes)
 
 app.use(investmentRoutes)
 

@@ -29,6 +29,7 @@ const addInvestment = asyncHandler(async (req, res) => {
   }
 })
 
+
 module.exports = {
   addInvestment,
 }
