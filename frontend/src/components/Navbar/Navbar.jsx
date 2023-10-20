@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import {
-  FaFacebookSquare,
-  FaInstagramSquare,
-  FaYoutubeSquare,
+  FaUserCircle
 } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  Button,
+  Portal,
+} from '@chakra-ui/react'
 
 const Navbar = () => {
   const logOut = () => {
@@ -43,33 +53,29 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
+      
+  
+  
         <div className='social-media'>
-          <ul className='social-media-desktop'>
-            <li>
-              <a
-                href='https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA'
-                target='_thapa'
-              >
-                <FaFacebookSquare className='facebook' />
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.instagram.com/thapatechnical/'
-                target='_thapa'
-              >
-                <FaInstagramSquare className='instagram' />
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA'
-                target='_thapa'
-              >
-                <FaYoutubeSquare className='youtube' />
-              </a>
-            </li>
-          </ul>
+        <div className='nav-user'> 
+        <Popover>
+  <PopoverTrigger>
+    <FaUserCircle size={70} />
+  </PopoverTrigger>
+  <Portal>
+    <PopoverContent>
+      <PopoverArrow />
+      <PopoverCloseButton />
+      <PopoverBody>
+        <div className='nav-logout'>
+        <p>Do You want to Logout</p>
+        <Button colorScheme='blue' onClick={logOut}>Logout</Button>
+        </div>
+      </PopoverBody>
+    </PopoverContent>
+  </Portal>
+</Popover>
+</div>
           <div className='hamburger-menu'>
             <a
               href='#'
