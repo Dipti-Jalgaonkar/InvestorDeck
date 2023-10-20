@@ -8,12 +8,12 @@ const {
 
 const authRoutes = express.Router()
 
-authRoutes.post('/api/investor/login', loginController)
+authRoutes.post('/api/investor/login', startupLoginController)
 
 authRoutes.post('/api/investor/register', regController)
 
 authRoutes.post('/api/startup/register', startupRegController)
 
-authRoutes.post('/api/startup/login', startupLoginController)
+authRoutes.post('/api/startup/login', loginController)
 
 module.exports = authRoutes
