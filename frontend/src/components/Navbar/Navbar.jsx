@@ -17,15 +17,21 @@ import {
   Button,
   Portal,
 } from '@chakra-ui/react'
+import logo2 from '../../assets/logo.png'
+import authContext from '../../context/auth.js'
+import { useContext } from 'react'
 
 const Navbar = () => {
   const logOut = () => {
-    window.localStorage.removeItem('user')
+    window.localStorage.removeItem('token');
+    setLoggedIn(false);
   }
   const [showMediaIcons, setShowMediaIcons] = useState(false)
+  const{loggedIn,setLoggedIn}= useContext(authContext)
   return (
     <>
       <nav className='main-nav'>
+          <img className='logo2' src={logo2}/>
         <div className='logo'>
           <h2>
             <span>I</span>nvestor
@@ -40,27 +46,28 @@ const Navbar = () => {
         >
           <ul>
             <li>
-              <Link to='/main'>Home</Link>
+              <Link to='/'>Home</Link>
             </li>
             <li>
               <Link to='/about'>about</Link>
             </li>
             <li>
-              <Link to='/main'>services</Link>
+              <Link to='/'>services</Link>
             </li>
             <li>
-              <Link to='/main'>contact</Link>
+              <Link to='https://github.com/Gautami20'>contact</Link>
             </li>
           </ul>
         </div>
       
   
   
-        <div className='social-media'>
-        <div className='nav-user'> 
-        <Popover>
+  { loggedIn &&
+  <Popover value={{ className: 'nav-icons' }}>
   <PopoverTrigger>
-    <FaUserCircle size={70} />
+    <div className='nav-user'>
+  <FaUserCircle size={60}  />
+  </div>
   </PopoverTrigger>
   <Portal>
     <PopoverContent>
@@ -71,11 +78,22 @@ const Navbar = () => {
         <p>Do You want to Logout</p>
         <Button colorScheme='blue' onClick={logOut}>Logout</Button>
         </div>
+        
       </PopoverBody>
     </PopoverContent>
   </Portal>
 </Popover>
-</div>
+}
+
+{
+  !loggedIn && 
+  <div className='nav-logbutton'>
+    <Link to='/login'>Login</Link>
+  </div>
+}
+
+
+<div className='social-media'>  
           <div className='hamburger-menu'>
             <a
               href='#'

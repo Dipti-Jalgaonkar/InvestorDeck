@@ -26,9 +26,9 @@ function Login() {
     e.preventDefault()
     loginUser(form.email, form.password)
     if (success) {
-      navigate('/main')
+      navigate('/')
     } else {
-      navigate('/main')
+      navigate('/')
     }
   }
 

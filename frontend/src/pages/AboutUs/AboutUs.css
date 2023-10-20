@@ -9,14 +9,14 @@ body {
 
 #aboutimage-container {
     max-width: 100%;
-    height: 500px;
+    height: 600px;
     position: relative;
     border: 2px 2px 1px 2px solid #001B48;
 }
 
 #aboutimage-container img {
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit: cover;
     object-position: left;
 }
@@ -35,6 +35,7 @@ body {
     text-align: center;
     margin: 0px 0px 20px 0px;
     padding: 0px;
+    font-size: 2.7rem;
 }
 
 .aboutaboutus-textdiv h2 {
@@ -45,31 +46,31 @@ body {
 
 .aboutaboutus-text {
     margin: 0px;
-    padding: 0px;
     position: relative;
     border: 1px 2px 2px 2px solid #001B48;
     text-align: center;
-    font-size: 20px;
-    ;
-    padding: 20px;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 60px 50px;
     background-color: #D6E7EE;
     color: #001B48;
     box-shadow: 1px 1px 9px 2px #6fc3e7 inset;
 }
 
 .aboutmission-container {
-    height: 400px;
+    height: 550px;
     position: relative;
 }
 
 .aboutmission-container img {
-    height: 400px;
+    height: 550px;
     width: 100%;
     object-fit: fill;
 }
 
 .aboutmission-contain {
-    width: 96%;
+    width: 100%;
+    height: 550px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +108,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 80px;
-    padding: 40px;
+    padding: 6.5rem;
     background-color: #D6E7EE;
     color: #001B48;
     box-shadow: 1px 1px 9px 2px #84a8b7 inset;
@@ -119,24 +120,34 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    gap: 75px;
 }
 
 .aboutoffers {
-    height: 200px;
-    width: 400px;
+    height: 250px;
+    width: 450px;
     border-radius: 30px 80px 30px 30px;
-    ;
-    padding: 10px;
+    padding: 2rem;
     background-color: #afdaed;
     text-align: center;
     box-shadow: 1px 1px 12px 3px #293a58;
 }
 
+.aboutoffers h2 {
+    font-weight: 700;
+}
+
+.aboutoffers p {
+    font-weight: 500;
+}
+
 .aboutoffer-div2 {
     flex: 1 1 0;
     font-weight: bolder;
-
     text-align: center;
 
+}
+
+.aboutoffer-div2 h1 {
+    font-size: 3.3rem;
 }

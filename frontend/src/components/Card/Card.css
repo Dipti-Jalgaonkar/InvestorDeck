@@ -8,15 +8,34 @@ body {
 }
 
 #cardcard-container {
-    height: 700px;
+    /* height: 700px; */
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 60px;
-    align-items: center;
     justify-content: center;
     background-color: #D6E7EE;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
 
+}
+
+.cardcard-h1text {
+    background-color: #D6E7EE;
+    color: #001B48;
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: center;
+}
+
+.cardcard-h1text h1 {
+    font-size: 3rem;
+}
+
+.cardcard-h1text p {
+    font-size: 1.6rem;
+    /* text-align: center; */
+    width: 95rem;
+    margin-left: 10rem;
 }
 
 #cardinvestor {
