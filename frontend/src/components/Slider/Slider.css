@@ -6,3 +6,13 @@
 .slider-img1 img {
     width: 100vw;
 }
+
+.carousel-p {
+    font-size: 1.9rem;
+    color: aliceblue;
+}
+
+.carousel-head {
+    font-size: 4rem;
+    color: aliceblue;
+}
