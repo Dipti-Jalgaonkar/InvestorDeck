@@ -10,6 +10,7 @@ import Login from './pages/Login/Login'
 import RegisterStart from './pages/Register/RegisterStartup'
 import Startup from './pages/Startup/Startup'
 import Profile from './pages/Profile/Profile'
+import Schedule from './pages/Schedule/Schedule'
 import ViewStartup from './pages/ViewStartup/ViewStartup'
 import authContext from './context/auth'
 import { useContext, useEffect } from 'react'
@@ -60,6 +61,10 @@ function App() {
           <Route
             path='/profile'
             element={<Profile />}
+          />
+          <Route
+            path='/schedule'
+            element={<Schedule />}
           />
           <Route
             path='/test'
