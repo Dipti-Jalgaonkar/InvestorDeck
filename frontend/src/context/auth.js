@@ -52,6 +52,8 @@ export const AuthProvider = ({ children }) => {
     console.log(data)
     if (data.success) {
       setSuccess(true)
+      setLoggedIn(true)
+      window.localStorage.setItem('token', data.token)
     } else {
       setSuccess(false)
     }
