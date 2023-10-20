@@ -36,7 +36,6 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem('token', data.token)
         console.log(localStorage.getItem('token'))
       }
-
     }
   }
 
@@ -59,6 +58,7 @@ export const AuthProvider = ({ children }) => {
       setSuccess(true)
       setLoggedIn(true)
       window.localStorage.setItem('token', data.token)
+      window.localStorage.setItem('user_id', data.id)
     } else {
       setSuccess(false)
     }
