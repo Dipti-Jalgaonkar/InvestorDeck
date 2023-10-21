@@ -3,6 +3,7 @@ import jwt_decode from 'jwt-decode'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Main from './pages/Main/Main'
 import AboutUs from './pages/AboutUs/AboutUs'
+import ContactUs from './pages/ContactUs/ContactUs'
 import Investor from './pages/Investor/Investor'
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
@@ -57,6 +58,10 @@ function App() {
           <Route
             path='/about'
             element={<AboutUs />}
+          />
+          <Route
+            path='/contact'
+            element={<ContactUs />}
           />
           <Route
             path='/profile'
