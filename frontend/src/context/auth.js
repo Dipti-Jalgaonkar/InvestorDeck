@@ -7,6 +7,7 @@ export const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(false)
   const [success, setSuccess] = useState(false)
   const [startups, setStartups] = useState([])
+  const [investments, setInvestments] = useState([])
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
@@ -60,7 +61,7 @@ export const AuthProvider = ({ children }) => {
       setLoggedIn(true)
       window.localStorage.setItem('token', data.token)
       window.localStorage.setItem('user_id', data.id)
-      window.localStorage.setItem('startups', data.startups)
+      setStartups(data.startups)
     } else {
       setSuccess(false)
     }
@@ -83,6 +84,23 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  const getInvestments = async () => {
+    const id = window.localStorage.getItem('user_id')
+    const body = new URLSearchParams()
+    body.append('id', id)
+    try {
+      const response = await fetch('http://localhost:5000/api/getInvestments', {
+        method: 'POST',
+        body: body,
+      })
+      const data = await response.json()
+      setInvestments(data.investments)
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <authContext.Provider
       value={{
@@ -93,6 +111,8 @@ export const AuthProvider = ({ children }) => {
         success,
         getStartups,
         startups,
+        getInvestments,
+        investments,
       }}
     >
       {children}

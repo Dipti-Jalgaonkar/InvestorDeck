@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-import {
-  FaUserCircle
-} from 'react-icons/fa'
+import { FaUserCircle } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { Link } from 'react-router-dom'
 import {
@@ -23,15 +21,18 @@ import { useContext } from 'react'
 
 const Navbar = () => {
   const logOut = () => {
-    window.localStorage.removeItem('token');
-    setLoggedIn(false);
+    window.localStorage.removeItem('token')
+    setLoggedIn(false)
   }
   const [showMediaIcons, setShowMediaIcons] = useState(false)
-  const{loggedIn,setLoggedIn}= useContext(authContext)
+  const { loggedIn, setLoggedIn } = useContext(authContext)
   return (
     <>
       <nav className='main-nav'>
-          <img className='logo2' src={logo2}/>
+        <img
+          className='logo2'
+          src={logo2}
+        />
         <div className='logo'>
           <h2>
             <span>I</span>nvestor
@@ -59,41 +60,44 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-      
-  
-  
-  { loggedIn &&
-  <Popover value={{ className: 'nav-icons' }}>
-  <PopoverTrigger>
-    <div className='nav-user'>
-  <FaUserCircle size={60}  />
-  </div>
-  </PopoverTrigger>
-  <Portal>
-    <PopoverContent>
-      <PopoverArrow />
-      <PopoverCloseButton />
-      <PopoverBody>
-        <div className='nav-logout'>
-        <p>Do You want to Logout</p>
-        <Button colorScheme='blue' onClick={logOut}>Logout</Button>
-        </div>
-        
-      </PopoverBody>
-    </PopoverContent>
-  </Portal>
-</Popover>
-}
 
-{
-  !loggedIn && 
-  <div className='nav-logbutton'>
-    <Link to='/login'>Login</Link>
-  </div>
-}
+        {loggedIn && (
+          <Popover value={{ className: 'nav-icons' }}>
+            <PopoverTrigger>
+              <div className='nav-user'>
+                <FaUserCircle size={60} />
+              </div>
+            </PopoverTrigger>
+            <Portal>
+              <PopoverContent>
+                <PopoverArrow />
+                <PopoverCloseButton />
+                <PopoverBody>
+                  <div className='nav-logout'>
+                    <Link to='/profile'>
+                      <Button colorScheme='blue'>Profile</Button>
+                    </Link>
+                    <p>Do You want to Logout</p>
+                    <Button
+                      colorScheme='blue'
+                      onClick={logOut}
+                    >
+                      Logout
+                    </Button>
+                  </div>
+                </PopoverBody>
+              </PopoverContent>
+            </Portal>
+          </Popover>
+        )}
 
+        {!loggedIn && (
+          <div className='nav-logbutton'>
+            <Link to='/login'>Login</Link>
+          </div>
+        )}
 
-<div className='social-media'>  
+        <div className='social-media'>
           <div className='hamburger-menu'>
             <a
               href='#'

@@ -29,7 +29,23 @@ const addInvestment = asyncHandler(async (req, res) => {
   }
 })
 
+const getInvestments = asyncHandler(async (req, res) => {
+  const { id } = req.body
+  try {
+    const investorFound = await Investors.findOne({ _id: id })
+    if (!investorFound) {
+      res.status(404).json({ success: false, message: 'Investor not found!' })
+    } else {
+      res
+        .status(200)
+        .json({ success: true, investments: investorFound.investments })
+    }
+  } catch (err) {
+    throw new Error(err.message)
+  }
+})
 
 module.exports = {
   addInvestment,
+  getInvestments,
 }
