@@ -47,6 +47,7 @@ const loginController = asyncHandler(async (req, res) => {
       name: userExists.name,
       email: userExists.email,
       password: userExists.password,
+      startups: userExists.investments,
       token: generateToken(userExists._id),
     })
   } else {
@@ -75,6 +76,7 @@ const startupLoginController = asyncHandler(async (req, res) => {
           name: emailExists.name,
           email: emailExists.email,
           password: emailExists.password,
+
           token: generateToken(emailExists._id),
         })
       } else {

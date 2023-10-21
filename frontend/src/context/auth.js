@@ -60,6 +60,7 @@ export const AuthProvider = ({ children }) => {
       setLoggedIn(true)
       window.localStorage.setItem('token', data.token)
       window.localStorage.setItem('user_id', data.id)
+      window.localStorage.setItem('startups', data.startups)
     } else {
       setSuccess(false)
     }
@@ -68,7 +69,7 @@ export const AuthProvider = ({ children }) => {
   const getStartups = async () => {
     try {
       const response = await fetch(
-        'http://localhost:5000/api/startups/getStartups',
+        'http://localhost:5000/api/startup/getStartup',
         {
           method: 'GET',
         }
@@ -90,6 +91,8 @@ export const AuthProvider = ({ children }) => {
         registerUser,
         loginUser,
         success,
+        getStartups,
+        startups,
       }}
     >
       {children}
