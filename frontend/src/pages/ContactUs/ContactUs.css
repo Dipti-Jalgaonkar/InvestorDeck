@@ -9,7 +9,7 @@
 }
 
 .contact-container {
-    width: 850px;
+    width: 900px;
     height: 720px;
     background-color: white;
     position: relative;
@@ -71,10 +71,10 @@
 .contact-form {
     position: absolute;
     right: 50px;
-    width: 400px;
+    width: 450px;
     height: 500px;
     margin: 20px 0px 20px 0px;
-    padding: 0px 40px 00px 40px;
+    padding: 0px 25px 00px 40px;
     text-align: left;
 }
 
@@ -97,7 +97,7 @@
 
 .contact-form input,
 .contact-form textarea {
-    width: 340px;
+    width: 360px;
     padding: 10px;
     margin: 8px 0px 10px 0px;
     border-radius: 5px;

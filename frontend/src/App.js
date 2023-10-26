@@ -54,22 +54,9 @@ function App() {
             path='/about'
             element={<AboutUs />}
           />
-
-          <Route
-            path='/about'
-            element={<AboutUs />}
-          />
           <Route
             path='/contact'
             element={<ContactUs />}
-          />
-          <Route
-            path='/profile'
-            element={<Profile />}
-          />
-          <Route
-            path='/schedule'
-            element={<Schedule />}
           />
           <Route
             path='/test'
@@ -83,6 +70,14 @@ function App() {
           />
           {loggedIn && (
             <>
+              <Route
+                path='/profile'
+                element={<Profile />}
+              />
+              <Route
+                path='/schedule'
+                element={<Schedule />}
+              />
               <Route
                 path='/viewstartup'
                 element={<ViewStartup />}

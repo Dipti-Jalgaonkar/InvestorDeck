@@ -53,6 +53,9 @@ const Navbar = () => {
             <li>
               <Link to='/about'>about</Link>
             </li>
+            <li>
+              <Link to='/investor'>Investor Info</Link>
+            </li>
             {loggedIn && (
               <li>
                 <Link to='/viewstartup'>Invest</Link>
@@ -64,7 +67,7 @@ const Navbar = () => {
               </li>
             )}
             <li>
-              <Link to='https://github.com/Gautami20'>contact</Link>
+              <Link to='/contact'>contact</Link>
             </li>
           </ul>
         </div>

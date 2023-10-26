@@ -14,7 +14,7 @@ export const Profile = () => {
 
   return (
     <div className='view_container'>
-      <h2 className='view_h1'>My Investments : </h2>
+      <h2 className='view_h1'>My Profile : </h2>
       <Grid
         h='200px'
         templateRows='repeat(2, 1fr)'
