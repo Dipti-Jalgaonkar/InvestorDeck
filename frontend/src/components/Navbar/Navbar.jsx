@@ -32,6 +32,7 @@ const Navbar = () => {
         <img
           className='logo2'
           src={logo2}
+          alt='logo'
         />
         <div className='logo'>
           <h2>
@@ -55,6 +56,16 @@ const Navbar = () => {
             <li>
               <Link to='/investor'>Investor Info</Link>
             </li>
+            {loggedIn && (
+              <li>
+                <Link to='/viewstartups'>Invest</Link>
+              </li>
+            )}
+            {!loggedIn && (
+              <li>
+                <Link to='/'>Services</Link>
+              </li>
+            )}
             <li>
               <Link to='/contact'>contact</Link>
             </li>
