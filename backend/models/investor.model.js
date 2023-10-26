@@ -29,6 +29,32 @@ const investorModel = mongoose.Schema({
       },
     },
   ],
+  appointments: [
+    {
+      appointment_schedule: {
+        appointment_date: {
+          type: String,
+          required: true,
+        },
+        appointment_time: {
+          type: String,
+          required: true,
+        },
+      },
+      startup_id: {
+        type: mongoose.ObjectId,
+        required: true,
+      },
+      startup_name: {
+        type: String,
+        required: true,
+      },
+      amount: {
+        type: Number,
+        required: true,
+      },
+    },
+  ],
 })
 
 const investor = mongoose.model('Investors', investorModel)

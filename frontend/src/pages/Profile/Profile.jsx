@@ -6,7 +6,7 @@ import { Grid, GridItem } from '@chakra-ui/react'
 import CardStartup from '../../components/CardStartup/CardStartup'
 
 export const Profile = () => {
-  const { startups, getInvestments, investments } = useContext(authContext)
+  const { getInvestments, investments } = useContext(authContext)
 
   useEffect(() => {
     getInvestments()
