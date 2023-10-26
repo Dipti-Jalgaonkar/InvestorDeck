@@ -55,7 +55,7 @@ const Navbar = () => {
             </li>
             {loggedIn && (
               <li>
-                <Link to='/viewstartups'>Invest</Link>
+                <Link to='/viewstartup'>Invest</Link>
               </li>
             )}
             {!loggedIn && (

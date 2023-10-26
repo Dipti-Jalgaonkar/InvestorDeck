@@ -31,6 +31,7 @@ export const Profile = () => {
                 name={item.startup_name}
                 desc={item.email}
                 amount={item.investedAmount}
+                type={false}
               />
             </GridItem>
           )

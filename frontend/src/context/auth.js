@@ -101,6 +101,25 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  const addInvestment = async (s_id, name, amount) => {
+    const id = window.localStorage.getItem('user_id')
+    const body = new URLSearchParams()
+    body.append('id', id)
+    body.append('name', name)
+    body.append('amount', amount)
+    body.append('startup_id', s_id)
+    try {
+      const response = await fetch('http://localhost:5000/api/addInvestment', {
+        method: 'POST',
+        body: body,
+      })
+      const data = await response.json()
+      console.log(data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <authContext.Provider
       value={{
@@ -113,6 +132,7 @@ export const AuthProvider = ({ children }) => {
         startups,
         getInvestments,
         investments,
+        addInvestment,
       }}
     >
       {children}
