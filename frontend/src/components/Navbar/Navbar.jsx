@@ -53,10 +53,10 @@ const Navbar = () => {
               <Link to='/about'>about</Link>
             </li>
             <li>
-              <Link to='/'>services</Link>
+              <Link to='/investor'>Investor Info</Link>
             </li>
             <li>
-              <Link to='https://github.com/Gautami20'>contact</Link>
+              <Link to='/contact'>contact</Link>
             </li>
           </ul>
         </div>
