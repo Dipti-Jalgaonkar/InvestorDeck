@@ -28,6 +28,7 @@ export const Profile = () => {
               key={index}
             >
               <CardStartup
+                startup_id={item.startup_id}
                 name={item.startup_name}
                 desc={item.email}
                 amount={item.investedAmount}

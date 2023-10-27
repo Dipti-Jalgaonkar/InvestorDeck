@@ -48,15 +48,26 @@ const getInvestments = asyncHandler(async (req, res) => {
 const addAppointment = asyncHandler(async (req, res) => {
   const { id, startup_id, date, time, startup_name, amount } = req.body
   try {
-    const investor = await Investors.findOne({ _id: id })
-    if (!investor) {
+    // console.log(id, startup_id, date, time)
+    const investorFound = await Investors.findOne({ _id: id })
+    // console.log(investorFound)
+    if (!investorFound) {
       res.status(404).json({ success: false, message: 'Investor not found!' })
     } else {
-      investor.investments.push({
+      investorFound.appointments.push({
+        appointment_schedule: {
+          appointment_date: date,
+          appointment_time: time,
+        },
         startup_id: startup_id,
         startup_name: startup_name,
-        investedAmount: amount,
+        amount: amount,
       })
+      // console.log(investorFound.appointments)
+      await investorFound.save()
+      res
+        .status(201)
+        .json({ success: true, message: 'Appointment Scheduled Successfully' })
     }
   } catch (err) {
     throw new Error(err.message)

@@ -1,5 +1,6 @@
 import React from 'react'
 import { createContext, useState } from 'react'
+import emailjs from 'emailjs-com'
 
 const authContext = createContext()
 
@@ -8,6 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [success, setSuccess] = useState(false)
   const [startups, setStartups] = useState([])
   const [investments, setInvestments] = useState([])
+  const [appointment, setAppointment] = useState({})
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
@@ -92,6 +94,8 @@ export const AuthProvider = ({ children }) => {
       setLoggedIn(true)
       window.localStorage.setItem('token', data.token)
       window.localStorage.setItem('user_id', data.id)
+      window.localStorage.setItem('user_email', data.email)
+      window.localStorage.setItem('user_name', data.name)
       setStartups(data.startups)
     } else {
       setSuccess(false)
@@ -176,6 +180,43 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  const addAppointment = async (
+    startup_id,
+    date,
+    time,
+    startup_name,
+    amount
+  ) => {
+    const id = window.localStorage.getItem('user_id')
+    const body = new URLSearchParams()
+    body.append('id', id)
+    body.append('startup_id', startup_id)
+    body.append('date', date)
+    body.append('time', time)
+    body.append('startup_name', startup_name)
+    body.append('amount', amount)
+
+    try {
+      const response = await fetch('http://localhost:5000/api/addAppointment', {
+        method: 'POST',
+        body: body,
+      })
+      const data = await response.json()
+      console.log(data)
+      const email = window.localStorage.getItem('user_email')
+      const name = window.localStorage.getItem('user_name')
+      emailjs.send('service_o3j8q6a', 'template_a8cgw4i', {
+        to_name: name,
+        to_email: email,
+        date: date,
+        time: time,
+        from_name: startup_name,
+      })
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <authContext.Provider
       value={{
@@ -191,6 +232,9 @@ export const AuthProvider = ({ children }) => {
         getInvestments,
         investments,
         addInvestment,
+        addAppointment,
+        setAppointment,
+        appointment,
       }}
     >
       {children}

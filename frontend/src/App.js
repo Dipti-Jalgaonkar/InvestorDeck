@@ -88,10 +88,7 @@ function App() {
                 path='/profile'
                 element={<Profile />}
               />
-              <Route
-                path='/schedule'
-                element={<Schedule />}
-              />
+
               <Route
                 path='/viewstartup'
                 element={<ViewStartup />}
@@ -100,7 +97,14 @@ function App() {
                 path='/*'
                 element={<Main />}
               />
-
+              <Route
+                path='/startup'
+                element={<Startup />}
+              />
+              <Route
+                path='/schedule/:id'
+                element={<Schedule />}
+              />
             </>
           )}
           {!loggedIn && (
@@ -119,6 +123,10 @@ function App() {
               />
             </>
           )}
+          <Route
+            path='*'
+            element={<Main />}
+          />
         </Routes>
         <Footer />
       </Router>
