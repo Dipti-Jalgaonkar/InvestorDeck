@@ -10,6 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [startups, setStartups] = useState([])
   const [investments, setInvestments] = useState([])
   const [appointment, setAppointment] = useState({})
+  const [schedules, setSchedules] = useState()
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
@@ -205,13 +206,37 @@ export const AuthProvider = ({ children }) => {
       console.log(data)
       const email = window.localStorage.getItem('user_email')
       const name = window.localStorage.getItem('user_name')
-      emailjs.send('service_o3j8q6a', 'template_a8cgw4i', {
-        to_name: name,
-        to_email: email,
-        date: date,
-        time: time,
-        from_name: startup_name,
-      })
+      emailjs.send(
+        'service_o3j8q6a',
+        'template_a8cgw4i',
+        {
+          to_name: name,
+          to_email: email,
+          date: date,
+          time: time,
+          from_name: startup_name,
+        },
+        'uOoGIXF3UoBPsxTno'
+      )
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
+  const getAppointments = async () => {
+    const id = window.localStorage.getItem('user_id')
+    const body = new URLSearchParams()
+    body.append('id', id)
+    try {
+      const response = await fetch(
+        'http://localhost:5000/api/getAppointments',
+        {
+          method: 'POST',
+          body: body,
+        }
+      )
+      const data = await response.json()
+      setSchedules(data.appointments)
     } catch (err) {
       console.log(err)
     }
@@ -235,6 +260,8 @@ export const AuthProvider = ({ children }) => {
         addAppointment,
         setAppointment,
         appointment,
+        getAppointments,
+        schedules,
       }}
     >
       {children}

@@ -4,7 +4,7 @@ import Calendar from 'react-calendar'
 import 'react-calendar/dist/Calendar.css'
 import './Schedule.css'
 import { Button, Stack, ButtonGroup } from '@chakra-ui/react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import authContext from '../../context/auth'
 
 const Schedule = () => {
@@ -13,6 +13,7 @@ const Schedule = () => {
   const [time, setTime] = useState()
 
   const { id } = useParams()
+  const navigate = useNavigate()
 
   const handleSubmit = () => {
     const date = value.toLocaleDateString('en-GB')
@@ -23,6 +24,9 @@ const Schedule = () => {
       appointment.startup_name,
       appointment.amount
     )
+    setTimeout(() => {
+      navigate('/myappointments')
+    }, 2000)
   }
 
   const { addAppointment, appointment } = useContext(authContext)

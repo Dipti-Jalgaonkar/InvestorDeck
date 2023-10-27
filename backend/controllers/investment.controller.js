@@ -74,8 +74,25 @@ const addAppointment = asyncHandler(async (req, res) => {
   }
 })
 
+const getAppointments = asyncHandler(async (req, res) => {
+  const { id } = req.body
+  try {
+    const investorFound = await Investors.findOne({ _id: id })
+    if (!investorFound) {
+      res.status(404).json({ success: false, message: 'Investor not found!' })
+    } else {
+      res
+        .status(200)
+        .json({ success: true, appointments: investorFound.appointments })
+    }
+  } catch (err) {
+    throw new Error(err)
+  }
+})
+
 module.exports = {
   addInvestment,
   getInvestments,
   addAppointment,
+  getAppointments,
 }

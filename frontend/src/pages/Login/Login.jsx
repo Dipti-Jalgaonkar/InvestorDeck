@@ -9,8 +9,9 @@ function Login() {
   const [form, setForm] = useState({
     email: '',
     password: '',
-    type:0,
   })
+
+  const [type, setType] = useState(0)
 
   const onChange = (e) => {
     setForm((prevState) => ({
@@ -21,34 +22,21 @@ function Login() {
 
   const navigate = useNavigate()
 
-  const { loginUser, investloginUser , success } = useContext(authContext)
+  const { loginUser, investloginUser, success } = useContext(authContext)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if(form.type == 1){
+    if (type === 1) {
       investloginUser(form.email, form.password)
-    }
-    else if(form.type == 2){
-    loginUser(form.email, form.password)
+    } else {
+      loginUser(form.email, form.password)
     }
 
     if (success) {
       navigate('/')
     } else {
-      navigate('/')
+      navigate('/login')
     }
-  }
-  const handelInvest= (e) => {
-    setForm((prevState) => ({
-      ...prevState,
-      type: 1,
-    }))
-  }
-  const handelRegister= (e) => {
-    setForm((prevState) => ({
-      ...prevState,
-      type: 2,
-    }))
   }
 
   return (
@@ -91,9 +79,10 @@ function Login() {
             <select
               className='login-element-input dropdown'
               name=''
+              onChange={(e) => setType(parseInt(e.target.value))}
             >
-              <option value='1' onClick={handelInvest}>Investor</option>
-              <option value='2' onClick={handelRegister}>Startup</option>
+              <option value='1'>Investor</option>
+              <option value='2'>Startup</option>
             </select>
           </div>
           <button
