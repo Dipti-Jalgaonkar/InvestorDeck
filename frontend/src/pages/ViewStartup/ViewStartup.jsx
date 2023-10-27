@@ -28,6 +28,8 @@ function ViewStartup() {
                 name={item.org_name}
                 desc={item.email}
                 amount={item.valuation}
+                startup_id={item._id}
+                type={true}
               />
             </GridItem>
           )

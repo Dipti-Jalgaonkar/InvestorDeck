@@ -20,8 +20,23 @@ import {
   useDisclosure,
 } from '@chakra-ui/react'
 
-function CardStartup({ name, desc, amount }) {
+import { useContext } from 'react'
+import authContext from '../../context/auth'
+
+function CardStartup({ startup_id, name, desc, amount, type }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const { addInvestment } = useContext(authContext)
+
+  const handleInvest = () => {
+    addInvestment(startup_id, name, amount)
+    onClose()
+  }
+
+  const handleSchedule = () => {
+    console.log('123')
+  }
+
   return (
     <>
       <Card
@@ -45,13 +60,24 @@ function CardStartup({ name, desc, amount }) {
           </CardBody>
 
           <CardFooter>
-            <Button
-              variant='solid'
-              colorScheme='blue'
-              onClick={onOpen}
-            >
-              Invest
-            </Button>
+            {type && (
+              <Button
+                variant='solid'
+                colorScheme='blue'
+                onClick={onOpen}
+              >
+                Invest
+              </Button>
+            )}
+            {!type && (
+              <Button
+                variant='solid'
+                colorScheme='blue'
+                onClick={handleSchedule}
+              >
+                Schedule
+              </Button>
+            )}
           </CardFooter>
         </Stack>
       </Card>
@@ -78,26 +104,28 @@ function CardStartup({ name, desc, amount }) {
         </ModalContent>
       </Modal>
 
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{name}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>Are you sure you want to invest in this firm?</ModalBody>
-          <ModalFooter>
-            <Button
-              colorScheme='blue'
-              mr={3}
-              onClick={onClose}
-            >
-              Confirm
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+      {type && (
+        <Modal
+          isOpen={isOpen}
+          onClose={onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>{name}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>Are you sure you want to invest in this firm?</ModalBody>
+            <ModalFooter>
+              <Button
+                colorScheme='blue'
+                mr={3}
+                onClick={handleInvest}
+              >
+                Confirm
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      )}
     </>
   )
 }
