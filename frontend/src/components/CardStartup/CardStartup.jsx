@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useNavigate } from 'react-router-dom'
+
 import {
   Card,
   CardHeader,
@@ -26,7 +28,9 @@ import authContext from '../../context/auth'
 function CardStartup({ startup_id, name, desc, amount, type }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const { addInvestment } = useContext(authContext)
+  const navigate = useNavigate()
+
+  const { addInvestment, setAppointment } = useContext(authContext)
 
   const handleInvest = () => {
     addInvestment(startup_id, name, amount)
@@ -34,7 +38,14 @@ function CardStartup({ startup_id, name, desc, amount, type }) {
   }
 
   const handleSchedule = () => {
-    console.log('123')
+    const id = window.localStorage.getItem('user_id')
+    console.log(startup_id)
+    setAppointment({
+      startup_id: startup_id,
+      startup_name: name,
+      amount: amount,
+    })
+    navigate(`/schedule/${id}`)
   }
 
   return (
