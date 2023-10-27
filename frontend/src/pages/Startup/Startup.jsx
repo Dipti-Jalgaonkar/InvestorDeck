@@ -11,10 +11,10 @@ function Startup() {
             <button><a href="">Register your <strong>Startup</strong></a></button>
         </div>
     </div>
-    <div className="startup-img-contain">
+    {/* <div className="startup-img-contain">
         <img className="startup-img" src={start}/>
         <h1>Innovate. Transform. Thrive.</h1>
-    </div>
+    </div> */}
     <div className="startup-features-container">
         <h1 className="startup-heading">Key Features</h1>
         <div className="features-contain">

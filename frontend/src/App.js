@@ -17,6 +17,7 @@ import authContext from './context/auth'
 import { useContext, useEffect } from 'react'
 import CardStartup from './components/CardStartup/CardStartup'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import InvestReg from './pages/InvestReg/InvestReg'
 
 function App() {
   const { loggedIn, setLoggedIn } = useContext(authContext)
@@ -54,9 +55,14 @@ function App() {
             path='/about'
             element={<AboutUs />}
           />
+
           <Route
             path='/contact'
             element={<ContactUs />}
+          />
+          <Route
+            path='/investor'
+            element={<Investor />}
           />
           <Route
             path='/test'
@@ -86,11 +92,6 @@ function App() {
                 path='/*'
                 element={<Main />}
               />
-
-              <Route
-                path='/investor'
-                element={<Investor />}
-              />
               <Route
                 path='/startup'
                 element={<Startup />}
@@ -102,6 +103,10 @@ function App() {
               <Route
                 path='/register'
                 element={<RegisterStart />}
+              />
+              <Route
+                path='/investreg'
+                element={<InvestReg />}
               />
               <Route
                 path='/login'

@@ -85,7 +85,7 @@ function Login() {
           </button>
         </div>
         <div className='login-footer'>
-          Don't have an account? <Link>Sign Up</Link>
+          Don't have an account? <Link to='/register'>Sign Up</Link>
         </div>
       </div>
     </div>

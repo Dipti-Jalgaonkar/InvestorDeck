@@ -53,17 +53,14 @@ const Navbar = () => {
             <li>
               <Link to='/about'>about</Link>
             </li>
-            <li>
-              <Link to='/investor'>Investor Info</Link>
-            </li>
             {loggedIn && (
               <li>
-                <Link to='/viewstartups'>Invest</Link>
+                <Link to='/viewstartup'>Invest</Link>
               </li>
             )}
             {!loggedIn && (
               <li>
-                <Link to='/'>Services</Link>
+                <Link to='/investor'>How?</Link>
               </li>
             )}
             <li>
@@ -92,8 +89,8 @@ const Navbar = () => {
                     <Button
                       colorScheme='blue'
                       onClick={logOut}
-                    >
-                      Logout
+                    ><Link to='/'>
+                      Logout</Link>
                     </Button>
                   </div>
                 </PopoverBody>

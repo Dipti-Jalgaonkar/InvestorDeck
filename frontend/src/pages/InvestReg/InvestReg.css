@@ -1,0 +1,27 @@
+.investreg_wrap {
+    position: absolute;
+    background-color: #ecfeff;
+    width: 98.9vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.investreg_register {
+    margin: 10vh 5vw;
+    height: 70vh;
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.investreg_title {
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.investreg_buttons_page_1 {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
