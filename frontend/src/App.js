@@ -57,7 +57,7 @@ function App() {
             element={<AboutUs />}
           />
           <Route
-            path='/appointment'
+            path='/myappointments'
             element={<Appointment />}
           />
           <Route

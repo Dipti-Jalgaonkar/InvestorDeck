@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
   const [startups, setStartups] = useState([])
   const [investments, setInvestments] = useState([])
   const [appointment, setAppointment] = useState({})
-  const [schedules, setSchedules] = useState()
+  const [schedules, setSchedules] = useState([])
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
