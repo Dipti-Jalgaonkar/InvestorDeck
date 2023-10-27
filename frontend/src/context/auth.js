@@ -34,8 +34,8 @@ export const AuthProvider = ({ children }) => {
       const data = await response.json()
       console.log(data)
       setSuccess(data.success)
-      if (data.sucess) {
-        localStorage.setItem('token', data.token)
+      if (data.success) {
+        window.localStorage.setItem('token', data.token)
         console.log(localStorage.getItem('token'))
       }
     }

@@ -104,26 +104,28 @@ function CardStartup({ startup_id, name, desc, amount, type }) {
         </ModalContent>
       </Modal>
 
-      {/* <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-      >
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>{name}</ModalHeader>
-          <ModalCloseButton />
-          <ModalBody>Are you sure you want to invest in this firm?</ModalBody>
-          <ModalFooter>
-            <Button
-              colorScheme='blue'
-              mr={3}
-              onClick={handleInvest}
-            >
-              Confirm
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal> */}
+      {type && (
+        <Modal
+          isOpen={isOpen}
+          onClose={onClose}
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>{name}</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>Are you sure you want to invest in this firm?</ModalBody>
+            <ModalFooter>
+              <Button
+                colorScheme='blue'
+                mr={3}
+                onClick={handleInvest}
+              >
+                Confirm
+              </Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      )}
     </>
   )
 }
