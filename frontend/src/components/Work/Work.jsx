@@ -4,6 +4,7 @@ import user from '../../assets/user.png'
 import seinterface from '../../assets/search-interface-symbol.png'
 import growth from '../../assets/growth.png'
 import piggy from '../../assets/piggy-bank.png'
+import { Link } from 'react-router-dom'
 
 function Work() {
   return (
@@ -14,8 +15,8 @@ function Work() {
             <p>
                 Welcome to Investor's Deck, where visionary investors and ambitious startups come together, fostering innovation, growth, and opportunities for a brighter future. Here's how it works:
             </p>
-            <button className="workstartup-btn">Register <strong>Startup</strong></button>
-            <button className="workinvest-btn">Start <strong>Investing</strong></button>
+            <Link to='/register'><button className="workstartup-btn">Register <strong>Startup</strong> </button></Link>
+            <Link to='/investreg'><button className="workinvest-btn">Start <strong>Investing</strong> </button></Link>
         </div>
         <div className="workwork-option1">
             <div className="workwork-join">

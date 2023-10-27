@@ -15,7 +15,7 @@ export default function Investor() {
         <div className="investhead-div">
             <h1>Welcome to the world of opportunities and financial growth. </h1>
             <h2>Explore the possibilities, discover your path, and embark on your journey to investment success with Investor's Deck.</h2>
-            <button><a href=""><Link to='/register'>Start Investing</Link></a></button>
+            <button><a href=""><Link to='/investreg'>Start Investing</Link></a></button>
         </div>
         
     </div>
@@ -62,7 +62,7 @@ export default function Investor() {
         <h3 className="investtext3">
             helping you discover and partner with the industry's top founders.
         </h3>
-        <button className="investbounce"><a href="">Join Now</a></button>
+        <button className="investbounce">Join Now</button>
         <img src={invest} alt="investors-img"/>
     </div>
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Startup.css"
 import start from "../../assets/startup-img.jpg"
+import { Link } from 'react-router-dom'
 
 function Startup() {
   return (
@@ -8,13 +9,9 @@ function Startup() {
     <div className="startup-container">
         <div className="startup-contain">
             <h1>Empower Your Startup Dreams with Investor's Deck - Where your Innovation Meets Investment</h1>
-            <button><a href="">Register your <strong>Startup</strong></a></button>
+            <button><Link to="/register">Register your <strong>Startup</strong></Link></button>
         </div>
     </div>
-    {/* <div className="startup-img-contain">
-        <img className="startup-img" src={start}/>
-        <h1>Innovate. Transform. Thrive.</h1>
-    </div> */}
     <div className="startup-features-container">
         <h1 className="startup-heading">Key Features</h1>
         <div className="features-contain">

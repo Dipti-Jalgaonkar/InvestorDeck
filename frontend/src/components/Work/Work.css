@@ -52,6 +52,8 @@ body {
 
 .workstartup-btn:hover {
     background-color: #012b73;
+    color: white;
+    text-decoration: none;
 }
 
 .workinvest-btn {
@@ -67,10 +69,13 @@ body {
     left: 15px;
     box-shadow: 1px 1px 9px 2px #335081;
     margin-top: 1rem;
+    text-decoration: none;
 }
 
 .workinvest-btn:hover {
     background-color: #012b73;
+    color: white;
+    text-decoration: none;
 }
 
 .workwork-option1 {

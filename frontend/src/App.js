@@ -18,6 +18,7 @@ import { useContext, useEffect } from 'react'
 import CardStartup from './components/CardStartup/CardStartup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import InvestReg from './pages/InvestReg/InvestReg'
+import Appointment from './pages/Appointment/Appointment'
 
 function App() {
   const { loggedIn, setLoggedIn } = useContext(authContext)
@@ -55,7 +56,10 @@ function App() {
             path='/about'
             element={<AboutUs />}
           />
-
+          <Route
+            path='/appointment'
+            element={<Appointment />}
+          />
           <Route
             path='/contact'
             element={<ContactUs />}
@@ -63,6 +67,10 @@ function App() {
           <Route
             path='/investor'
             element={<Investor />}
+          />
+          <Route
+            path='/startup'
+            element={<Startup />}
           />
           <Route
             path='/test'
@@ -92,10 +100,7 @@ function App() {
                 path='/*'
                 element={<Main />}
               />
-              <Route
-                path='/startup'
-                element={<Startup />}
-              />
+
             </>
           )}
           {!loggedIn && (

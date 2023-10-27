@@ -97,6 +97,31 @@ export const AuthProvider = ({ children }) => {
       setSuccess(false)
     }
   }
+  const investloginUser = async (email, pass) => {
+    const body = new URLSearchParams()
+    body.append('email', email)
+    body.append('password', pass)
+
+    const response = await fetch(`http://localhost:5000/api/investor/login`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: body,
+    })
+
+    const data = await response.json()
+    console.log(data)
+    if (data.success) {
+      setSuccess(true)
+      setLoggedIn(true)
+      window.localStorage.setItem('token', data.token)
+      window.localStorage.setItem('user_id', data.id)
+      setStartups(data.startups)
+    } else {
+      setSuccess(false)
+    }
+  }
 
   const getStartups = async () => {
     try {
@@ -159,6 +184,7 @@ export const AuthProvider = ({ children }) => {
         registerUser,
         investregUser,
         loginUser,
+        investloginUser,
         success,
         getStartups,
         startups,

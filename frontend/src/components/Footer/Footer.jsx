@@ -5,6 +5,7 @@ import facebook from '../../assets/facebook.svg'
 import instagram from '../../assets/instagram.svg'
 import linkedin from '../../assets/linkedin.svg'
 import youtube from '../../assets/youtube.svg'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -26,10 +27,10 @@ function Footer() {
             <p>Quick Links</p>
             <ul>
                 <li><a href="">FAQs</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Terms & Conditions</a></li>
-                <li><a href="">Contact Us</a></li>
+                <Link to='/about'><li>About Us</li></Link>
+                <Link to='/investor'><li>Privacy Policy</li></Link>
+                <Link to='/startup'><li>Terms & Conditions</li></Link>
+                <Link to='/contact'><li>Contact Us</li></Link>
             </ul>
         </div>
         <div id="footerfollowus">

@@ -2,6 +2,7 @@ import React from 'react';
 import './Card.css';
 import investcard from "../../assets/investor-icon.webp"
 import startcard from "../../assets/startup-icon.webp"
+import { Link } from 'react-router-dom';
 
 function Card() {
   return (
@@ -19,7 +20,7 @@ function Card() {
                 Discover and Invest in curated startups.
                 Get access to exclusive allocations and build your investment portfolio.
             </p>
-            <button><a href=""><strong>Join</strong> to Invest</a></button>
+            <button><Link to="/investor"><strong>Join</strong> to Invest</Link></button>
         </div>
         <div id="cardstartup">
             <img className="cardstartup-icon" src={startcard}/>
@@ -28,7 +29,7 @@ function Card() {
                 Fundraise in STEALTH with your curated list of investors & access value-added capital.
                 Bring all investors as a single entity in your cap table.
             </p>
-            <button><a href=""><strong>Join</strong> to raise funds</a></button>
+            <button><Link to="/startup"><strong>Join</strong> to raise funds</Link></button>
         </div>
     </div>
     </>
