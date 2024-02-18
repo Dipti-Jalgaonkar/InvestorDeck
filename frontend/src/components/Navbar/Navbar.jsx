@@ -89,8 +89,8 @@ const Navbar = () => {
                     <Button
                       colorScheme='blue'
                       onClick={logOut}
-                    ><Link to='/'>
-                      Logout</Link>
+                    >
+                      <Link to='/'>Logout</Link>
                     </Button>
                   </div>
                 </PopoverBody>

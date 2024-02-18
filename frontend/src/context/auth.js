@@ -242,6 +242,25 @@ export const AuthProvider = ({ children }) => {
     }
   }
 
+  const filterStartups = async (type) => {
+    const body = new URLSearchParams()
+    body.append('type', type)
+    try {
+      const response = await fetch(
+        'http://localhost:5000/api/startup/filterStartups',
+        {
+          method: 'POST',
+          body,
+        }
+      )
+      const data = await response.json()
+      console.log(data)
+      setStartups(data.startups)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   return (
     <authContext.Provider
       value={{
@@ -262,6 +281,7 @@ export const AuthProvider = ({ children }) => {
         appointment,
         getAppointments,
         schedules,
+        filterStartups,
       }}
     >
       {children}

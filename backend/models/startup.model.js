@@ -21,6 +21,10 @@ const startupSchema = mongoose.Schema({
     type: Number,
     required: [true, 'Please enter a rough valuation for your organization'],
   },
+  type: {
+    type: String,
+    required: [true, 'Please enter the type of organization'],
+  },
   currentInvestors: [
     {
       investor_id: {

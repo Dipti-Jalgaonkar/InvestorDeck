@@ -93,8 +93,8 @@ const startupLoginController = asyncHandler(async (req, res) => {
 
 const startupRegController = asyncHandler(async (req, res) => {
   try {
-    const { name, email, password, org_size, valuation } = req.body
-    if (!name || !email || !password || !org_size || !valuation) {
+    const { name, email, password, org_size, valuation, type } = req.body
+    if (!name || !email || !password || !org_size || !valuation || !type) {
       res.status(400).json({
         message: 'Please include all fields!',
       })
@@ -114,6 +114,7 @@ const startupRegController = asyncHandler(async (req, res) => {
           password: hashedPassword,
           org_size,
           valuation,
+          type,
         })
         res.status(201).json({
           success: true,
@@ -123,6 +124,7 @@ const startupRegController = asyncHandler(async (req, res) => {
           password: startup.password,
           org_size: startup.org_size,
           valuation: startup.valuation,
+          type: startup.type,
           token: generateToken(startup._id),
         })
       }
