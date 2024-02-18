@@ -1,19 +1,14 @@
 const express = require('express')
-const {
-  loginController,
-  regController,
-  startupRegController,
-  startupLoginController,
-} = require('../controllers/auth.controller')
+const auth = require('../controllers/auth.controller')
 
 const authRoutes = express.Router()
 
-authRoutes.post('/api/investor/login', startupLoginController)
+authRoutes.post('/api/investor/register', auth.regInvestor)
 
-authRoutes.post('/api/investor/register', regController)
+authRoutes.post('/api/investor/login', auth.loginInvestor)
 
-authRoutes.post('/api/startup/register', startupRegController)
+authRoutes.post('/api/startup/register', auth.regStartup)
 
-authRoutes.post('/api/startup/login', loginController)
+authRoutes.post('/api/startup/login', auth.loginStartup)
 
 module.exports = authRoutes

@@ -1,12 +1,9 @@
 const express = require('express')
-const {
-  getStartup,
-  filterStartups,
-} = require('../controllers/startup.controller')
+const startups = require('../controllers/startup.controller')
 const startupRoutes = express.Router()
 
-startupRoutes.get('/api/startup/getStartup', getStartup)
+startupRoutes.get('/api/startup/getStartup', startups.getStartups)
 
-startupRoutes.post('/api/startup/filterStartups', filterStartups)
+startupRoutes.post('/api/startup/filterStartups', startups.filterStartups)
 
 module.exports = startupRoutes
