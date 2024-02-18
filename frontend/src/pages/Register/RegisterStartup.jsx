@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import authContext from '../../context/auth'
 import {
   FormControl,
+  Select,
   FormLabel,
   FormErrorMessage,
   FormHelperText,
@@ -19,6 +20,7 @@ import {
   Checkbox,
   CheckboxGroup,
   Input,
+  Stack,
 } from '@chakra-ui/react'
 
 import './Register.css'
@@ -30,6 +32,7 @@ function RegisterStart() {
     org_name: '',
     org_size: 0,
     valuation: 0,
+    type:'',
   })
 
   const { registerUser, success } = useContext(authContext)
@@ -49,7 +52,8 @@ function RegisterStart() {
       form.email,
       form.password,
       form.org_size,
-      form.valuation
+      form.valuation,
+      form.type,
     )
     if (success) {
       navigate('/')
@@ -203,7 +207,22 @@ function RegisterStart() {
                   </FormControl>
                 </GridItem>
                 <GridItem colSpan={2}>
-                  <Checkbox iconSize='3rem'>GST Registered?</Checkbox>
+                  {/* <Checkbox iconSize='3rem'>GST Registered?</Checkbox> */}
+                  <FormControl isRequired>
+                  <FormLabel>Type of company</FormLabel>
+                  <Stack spacing={3}>
+                  <Select variant='outline' 
+                    placeholder='Type of company'   
+                    value={form.type}
+                    onChange={onChange}
+                    id='type'>
+                  <option value='FinTech'>FinTech</option>
+                  <option value='Edtech'>EdTech</option>
+                  <option value='IT'>IT</option>
+                  <option value='Entertainment'>Entertainment</option>
+                  </Select>
+                  </Stack>
+                  </FormControl>
                 </GridItem>
               </Grid>
               <div className='startup_buttons_page_1'>
