@@ -36,9 +36,9 @@ export const AuthProvider = ({ children }) => {
 
       const data = await response.json()
       console.log(data)
-      setSuccess(data.success)
-      if (data.success) {
-        window.localStorage.setItem('token', data.token)
+      setSuccess(data.data.success)
+      if (data.data.success) {
+        window.localStorage.setItem('token', data.data.token)
         console.log(localStorage.getItem('token'))
       }
     }
@@ -67,9 +67,9 @@ export const AuthProvider = ({ children }) => {
 
       const data = await response.json()
       console.log(data)
-      setSuccess(data.success)
-      if (data.sucess) {
-        localStorage.setItem('token', data.token)
+      setSuccess(data.data.success)
+      if (data.data.sucess) {
+        localStorage.setItem('token', data.data.token)
         console.log(localStorage.getItem('token'))
       }
     }
@@ -93,11 +93,11 @@ export const AuthProvider = ({ children }) => {
     if (data.success) {
       setSuccess(true)
       setLoggedIn(true)
-      window.localStorage.setItem('token', data.token)
-      window.localStorage.setItem('user_id', data.id)
-      window.localStorage.setItem('user_email', data.email)
-      window.localStorage.setItem('user_name', data.name)
-      setStartups(data.startups)
+      window.localStorage.setItem('token', data.data.token)
+      window.localStorage.setItem('user_id', data.data.id)
+      window.localStorage.setItem('user_email', data.data.email)
+      window.localStorage.setItem('user_name', data.data.name)
+      setStartups(data.data.startups)
     } else {
       setSuccess(false)
     }
@@ -120,9 +120,9 @@ export const AuthProvider = ({ children }) => {
     if (data.success) {
       setSuccess(true)
       setLoggedIn(true)
-      window.localStorage.setItem('token', data.token)
-      window.localStorage.setItem('user_id', data.id)
-      setStartups(data.startups)
+      window.localStorage.setItem('token', data.data.token)
+      window.localStorage.setItem('user_id', data.data.id)
+      setStartups(data.data.startups)
     } else {
       setSuccess(false)
     }

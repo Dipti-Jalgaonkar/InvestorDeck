@@ -19,6 +19,7 @@ import CardStartup from './components/CardStartup/CardStartup'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import InvestReg from './pages/InvestReg/InvestReg'
 import Appointment from './pages/Appointment/Appointment'
+import PaymentGateway from './pages/PaymentGateway/PaymentGateway'
 
 function App() {
   const { loggedIn, setLoggedIn } = useContext(authContext)
@@ -126,6 +127,10 @@ function App() {
           <Route
             path='*'
             element={<Main />}
+          />
+          <Route
+            path='/payment'
+            element={<PaymentGateway />}
           />
         </Routes>
         <Footer />
