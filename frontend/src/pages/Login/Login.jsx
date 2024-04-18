@@ -11,7 +11,7 @@ function Login() {
     password: '',
   })
 
-  const [type, setType] = useState(0)
+  const [type, setType] = useState(1)
 
   const onChange = (e) => {
     setForm((prevState) => ({
