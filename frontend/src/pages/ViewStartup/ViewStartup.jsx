@@ -7,7 +7,7 @@ import CardStartup from '../../components/CardStartup/CardStartup'
 function ViewStartup() {
   const { getStartups, startups, filterStartups } = useContext(authContext)
 
-  const [type, setType] = useState('Fintech')
+  const [type, setType] = useState('All')
 
   useEffect(() => {
     getStartups()
