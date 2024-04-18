@@ -21,22 +21,23 @@ export const Profile = () => {
         templateColumns='repeat(6, 1fr)'
         gap={4}
       >
-        {investments.map((item, index) => {
-          return (
-            <GridItem
-              colSpan={2}
-              key={index}
-            >
-              <CardStartup
-                startup_id={item.startup_id}
-                name={item.startup_name}
-                desc={item.email}
-                amount={item.investedAmount}
-                type={false}
-              />
-            </GridItem>
-          )
-        })}
+        {investments &&
+          investments.map((item, index) => {
+            return (
+              <GridItem
+                colSpan={2}
+                key={index}
+              >
+                <CardStartup
+                  startup_id={item.startup_id}
+                  name={item.startup_name}
+                  desc={item.email}
+                  amount={item.investedAmount}
+                  type={false}
+                />
+              </GridItem>
+            )
+          })}
       </Grid>
     </div>
   )

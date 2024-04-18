@@ -1,5 +1,6 @@
 const express = require('express')
 const Razorpay = require('razorpay')
+
 const crypto = require('crypto')
 const dotenv = require('dotenv').config()
 const connectDB = require('./config/db.config')
@@ -13,6 +14,10 @@ const PORT = process.env.PORT || 5000
 const secret_key = process.env.RAZORPAY_SECRET_KEY
 
 const app = express()
+const server = require('http').Server(app)
+const io = require('socket.io')(server)
+
+io.on('connection', (socket) => {})
 
 app.use(cors())
 
@@ -67,6 +72,6 @@ app.post('/paymentCapture', (req, res) => {
   }
 })
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log('Server is listening on port')
 })
