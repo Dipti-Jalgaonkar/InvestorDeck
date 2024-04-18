@@ -24,9 +24,11 @@ const Navbar = () => {
     window.localStorage.removeItem('token')
     window.localStorage.removeItem('user_id')
     setLoggedIn(false)
+    setIsStartup(false)
   }
   const [showMediaIcons, setShowMediaIcons] = useState(false)
   const { loggedIn, setLoggedIn } = useContext(authContext)
+  const { isStartup, setIsStartup } = useContext(authContext)
   return (
     <>
       <nav className='main-nav'>
@@ -59,7 +61,12 @@ const Navbar = () => {
                 <Link to='/viewstartup'>Invest</Link>
               </li>
             )}
-            {!loggedIn && (
+            {isStartup && (
+              <li>
+                <Link to='/viewstartup'>Activity</Link>
+              </li>
+            )}
+            {!loggedIn && !isStartup && (
               <li>
                 <Link to='/investor'>How?</Link>
               </li>
@@ -70,7 +77,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {loggedIn && (
+        {(loggedIn || isStartup) && (
           <Popover value={{ className: 'nav-icons' }}>
             <PopoverTrigger>
               <div className='nav-user'>
@@ -100,7 +107,7 @@ const Navbar = () => {
           </Popover>
         )}
 
-        {!loggedIn && (
+        {!loggedIn && !isStartup && (
           <div className='nav-logbutton'>
             <Link to='/login'>Login</Link>
           </div>

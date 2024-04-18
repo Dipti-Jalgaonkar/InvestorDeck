@@ -11,6 +11,7 @@ export const AuthProvider = ({ children }) => {
   const [investments, setInvestments] = useState([])
   const [appointment, setAppointment] = useState({})
   const [schedules, setSchedules] = useState([])
+  const [isStartup, setIsStartup] = useState([])
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
@@ -43,16 +44,14 @@ export const AuthProvider = ({ children }) => {
       }
     }
   }
-  const investregUser = async (name, email, pass, org_size, valuation) => {
-    if (!name || !email || !pass || !org_size || !valuation) {
+  const investregUser = async (name, email, pass) => {
+    if (!name || !email || !pass) {
       console.log('ERROR')
     } else {
       const body = new URLSearchParams()
       body.append('name', name)
       body.append('email', email)
       body.append('password', pass)
-      body.append('org_size', org_size)
-      body.append('valuation', valuation)
 
       const response = await fetch(
         `http://localhost:5000/api/investor/register`,
@@ -282,6 +281,8 @@ export const AuthProvider = ({ children }) => {
         getAppointments,
         schedules,
         filterStartups,
+        setIsStartup,
+        isStartup,
       }}
     >
       {children}

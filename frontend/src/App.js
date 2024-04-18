@@ -23,7 +23,8 @@ import PaymentGateway from './pages/PaymentGateway/PaymentGateway'
 import AppointmentRoom from './pages/AppointmentRoom/AppointmentRoom'
 
 function App() {
-  const { loggedIn, setLoggedIn } = useContext(authContext)
+  const { loggedIn, setLoggedIn, isStartup, setIsStartup } = useContext(authContext)
+
 
   useEffect(() => {
     const token = window.localStorage.getItem('token')
@@ -109,7 +110,7 @@ function App() {
               />
             </>
           )}
-          {!loggedIn && (
+          {!loggedIn && !isStartup && (
             <>
               <Route
                 path='/register'
