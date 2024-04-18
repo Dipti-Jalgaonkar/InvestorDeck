@@ -1,5 +1,5 @@
 import React from 'react'
-import { createContext, useState } from 'react'
+import { createContext, useState, useEffect } from 'react'
 import emailjs from 'emailjs-com'
 
 const authContext = createContext()
@@ -12,6 +12,8 @@ export const AuthProvider = ({ children }) => {
   const [appointment, setAppointment] = useState({})
   const [schedules, setSchedules] = useState([])
   const [isStartup, setIsStartup] = useState([])
+
+  useEffect(() => {}, [])
 
   const registerUser = async (name, email, pass, org_size, valuation) => {
     if (!name || !email || !pass || !org_size || !valuation) {
@@ -92,6 +94,8 @@ export const AuthProvider = ({ children }) => {
     if (data.success) {
       setSuccess(true)
       setLoggedIn(true)
+      setIsStartup(true)
+      window.localStorage.setItem('startup', true)
       window.localStorage.setItem('token', data.data.token)
       window.localStorage.setItem('user_id', data.data.id)
       window.localStorage.setItem('user_email', data.data.email)
