@@ -21,7 +21,7 @@ export const Profile = () => {
         templateColumns='repeat(6, 1fr)'
         gap={4}
       >
-        {investments.map((item, index) => {
+        {investments && investments.map((item, index) => {
           return (
             <GridItem
               colSpan={2}

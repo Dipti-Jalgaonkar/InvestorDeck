@@ -21,7 +21,8 @@ import InvestReg from './pages/InvestReg/InvestReg'
 import Appointment from './pages/Appointment/Appointment'
 
 function App() {
-  const { loggedIn, setLoggedIn } = useContext(authContext)
+  const { loggedIn, setLoggedIn, isStartup, setIsStartup } = useContext(authContext)
+
 
   useEffect(() => {
     const token = window.localStorage.getItem('token')
@@ -107,7 +108,7 @@ function App() {
               />
             </>
           )}
-          {!loggedIn && (
+          {!loggedIn && !isStartup && (
             <>
               <Route
                 path='/register'
