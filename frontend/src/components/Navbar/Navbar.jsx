@@ -22,6 +22,7 @@ import { useContext } from 'react'
 const Navbar = () => {
   const logOut = () => {
     window.localStorage.removeItem('token')
+    window.localStorage.removeItem('user_id')
     setLoggedIn(false)
     setIsStartup(false)
   }
