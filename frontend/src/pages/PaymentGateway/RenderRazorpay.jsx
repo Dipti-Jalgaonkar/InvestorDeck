@@ -38,6 +38,7 @@ const RenderRazorpay = ({ orderId, keyId, keySecret, currency, amount }) => {
 
     rzp1.on('payment.submit', (response) => {
       paymentMethod.current = response.method
+
     })
 
     rzp1.on('payment.failed', (response) => {
@@ -58,7 +59,7 @@ const RenderRazorpay = ({ orderId, keyId, keySecret, currency, amount }) => {
     key: keyId,
     amount,
     currency,
-    name: 'amit',
+    name: 'USER',
     order_id: orderId,
     handler: (response) => {
       console.log('succeeded')
@@ -69,17 +70,8 @@ const RenderRazorpay = ({ orderId, keyId, keySecret, currency, amount }) => {
           .HmacSHA256(`${orderId}|${response.razorpay_payment_id}`, keySecret)
           .toString() === response.razorpay_signature
       if (succeeded) {
-        handlePayment('succeeded', {
-          orderId,
-          paymentId,
-          signature: response.razorpay_signature,
-        })
         navigate('/hogya')
       } else {
-        handlePayment('failed', {
-          orderId,
-          paymentId: response.razorpay_payment_id,
-        })
         navigate('/nahihua')
       }
     },

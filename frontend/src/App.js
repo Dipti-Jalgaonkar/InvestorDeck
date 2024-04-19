@@ -134,10 +134,8 @@ function App() {
             path='/payment'
             element={<PaymentGateway />}
           />
-          <Route
-            path='/meet'
-            element={<AppointmentRoom />}
-          />
+          <Route path='/meet' element={<AppointmentRoom />} />
+          {/* <Route path='/meet' Component={AppointmentRoom} /> */}
         </Routes>
         <Footer />
       </Router>

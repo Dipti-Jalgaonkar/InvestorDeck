@@ -12,12 +12,17 @@ import {
 import './Appointment.css'
 import { useContext, useEffect } from 'react'
 import authContext from '../../context/auth'
+import { useNavigate } from 'react-router-dom'
 
 function Appointment() {
   const { getAppointments, schedules } = useContext(authContext)
   useEffect(() => {
     getAppointments()
   }, [])
+  const navigate = useNavigate()
+  const handleNavigate = () =>{
+    navigate('/meet')
+  }
   return (
     <div className='appoint-cont'>
       <h2> My Appointments :</h2>
@@ -37,7 +42,7 @@ function Appointment() {
                 <Text>{item.amount}</Text>
               </CardBody>
               <CardFooter>
-                <Button>View here</Button>
+                <Button onClick={handleNavigate}>View here</Button>
               </CardFooter>
             </Card>
           )
