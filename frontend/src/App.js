@@ -21,6 +21,7 @@ import InvestReg from './pages/InvestReg/InvestReg'
 import Appointment from './pages/Appointment/Appointment'
 import PaymentGateway from './pages/PaymentGateway/PaymentGateway'
 import AppointmentRoom from './pages/AppointmentRoom/AppointmentRoom'
+import Transcript from './pages/Transcript/Transcript'
 
 function App() {
   const { loggedIn, setLoggedIn, isStartup, setIsStartup } =
@@ -134,7 +135,14 @@ function App() {
             path='/payment'
             element={<PaymentGateway />}
           />
-          <Route path='/meet' element={<AppointmentRoom />} />
+          <Route
+            path='/transcript'
+            element={<Transcript />}
+          />
+          <Route
+            path='/meet'
+            element={<AppointmentRoom />}
+          />
           {/* <Route path='/meet' Component={AppointmentRoom} /> */}
         </Routes>
         <Footer />

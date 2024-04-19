@@ -2,11 +2,11 @@ import requests
 import os
 from flask import Flask, jsonify
 from flask_cors import CORS
-import subprocess  # For shell command execution
+import subprocess 
 
 app = Flask(__name__)
 CORS(app)
-# Replace with your actual team ID and developer key
+
 TEAM_ID = "8a93102c-dcef-403a-84ff-21bebf37af1c"
 DEV_KEY = "F2h3Noses4vIOdAfTKjPi4nD64GPVaRf77KcTz0nGieKJ2wQjEoxtxQo8obtNhsE"
 
@@ -16,7 +16,7 @@ def get_audio_link_and_transcript(recording_id):
     auth = requests.auth.HTTPBasicAuth(TEAM_ID, DEV_KEY)
 
     try:
-        response = requests.get(url, auth=auth, mode='no-cors')
+        response = requests.get(url, auth=auth)
         response.raise_for_status()  # Raise exception for non-2xx status codes
         data = response.json()
         download_link = data.get("link")
@@ -39,7 +39,7 @@ def get_audio_link_and_transcript(recording_id):
 
 def extract_transcript_from_whisper(audio_file_path):
     try:
-        process = subprocess.run(['whisper', audio_file_path, '--model', 'medium'], capture_output=True, text=True)
+        process = subprocess.run(['whisper', audio_file_path, '--language','English', '--model',  'medium'], capture_output=True, text=True)
         if process.returncode != 0:
             raise ValueError("Whisper command failed with exit code {}".format(process.returncode))
 

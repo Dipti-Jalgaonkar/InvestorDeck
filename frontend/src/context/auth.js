@@ -12,6 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [appointment, setAppointment] = useState({})
   const [schedules, setSchedules] = useState([])
   const [isStartup, setIsStartup] = useState([])
+  const [trans, setTrans] = useState()
 
   useEffect(() => {}, [])
 
@@ -287,6 +288,8 @@ export const AuthProvider = ({ children }) => {
         filterStartups,
         setIsStartup,
         isStartup,
+        trans,
+        setTrans,
       }}
     >
       {children}
