@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import { FaUserCircle } from 'react-icons/fa'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -20,9 +20,19 @@ import authContext from '../../context/auth.js'
 import { useContext } from 'react'
 
 const Navbar = () => {
+  useEffect(() => {
+    const startup = window.localStorage.getItem('startup')
+    if (startup) {
+      setIsStartup(true)
+    } else {
+      setIsStartup(false)
+    }
+    console.log(startup)
+  }, [])
   const logOut = () => {
     window.localStorage.removeItem('token')
     window.localStorage.removeItem('user_id')
+    window.localStorage.removeItem('startup')
     setLoggedIn(false)
     setIsStartup(false)
   }
@@ -56,7 +66,7 @@ const Navbar = () => {
             <li>
               <Link to='/about'>about</Link>
             </li>
-            {loggedIn && (
+            {loggedIn && !isStartup && (
               <li>
                 <Link to='/viewstartup'>Invest</Link>
               </li>

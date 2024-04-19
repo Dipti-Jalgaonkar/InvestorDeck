@@ -35,6 +35,7 @@ function CardStartup({ startup_id, name, desc, amount, type }) {
   const handleInvest = () => {
     addInvestment(startup_id, name, amount)
     onClose()
+    navigate('/payment', { state: { amount2: amount } })
   }
 
   const handleSchedule = () => {

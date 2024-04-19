@@ -1,14 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useLocation } from 'react-router-dom'
 import RenderRazorpay from './RenderRazorpay'
 
 function PaymentGateway() {
+  const location = useLocation()
   const [displayRazorpay, setDisplayRazorpay] = useState(false)
   const [orderDetails, setOrderDetails] = useState({
     orderId: null,
     currency: null,
     amount: null,
   })
+
+  useEffect(() => {
+    console.log(location.state.amount2)
+  }, [])
 
   const handleCreateOrder = async (amount, currency) => {
     const sendBody = new URLSearchParams()
@@ -35,7 +41,7 @@ function PaymentGateway() {
   }
   return (
     <div>
-      <button onClick={() => handleCreateOrder(10000, 'INR')}>
+      <button onClick={() => handleCreateOrder(location.state.amount2, 'INR')}>
         Place Order
       </button>
 
