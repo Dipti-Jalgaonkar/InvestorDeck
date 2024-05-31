@@ -2,13 +2,14 @@ import requests
 import os
 from flask import Flask, jsonify
 from flask_cors import CORS
-import subprocess 
+import subprocess
 
 app = Flask(__name__)
 CORS(app)
 
 TEAM_ID = "8a93102c-dcef-403a-84ff-21bebf37af1c"
 DEV_KEY = "F2h3Noses4vIOdAfTKjPi4nD64GPVaRf77KcTz0nGieKJ2wQjEoxtxQo8obtNhsE"
+
 
 @app.route('/get_audio_link_and_transcript/<recording_id>', methods=['GET'])
 def get_audio_link_and_transcript(recording_id):
@@ -37,17 +38,21 @@ def get_audio_link_and_transcript(recording_id):
     except (requests.exceptions.RequestException, subprocess.CalledProcessError) as e:
         return jsonify({"error": f"Error processing request: {e}"}), 500
 
+
 def extract_transcript_from_whisper(audio_file_path):
     try:
-        process = subprocess.run(['whisper', audio_file_path, '--language','English', '--model',  'medium'], capture_output=True, text=True)
+        process = subprocess.run(['whisper', audio_file_path, '--language',
+                                 'English', '--model',  'tiny'], capture_output=True, text=True)
         if process.returncode != 0:
-            raise ValueError("Whisper command failed with exit code {}".format(process.returncode))
+            raise ValueError(
+                "Whisper command failed with exit code {}".format(process.returncode))
 
         return process.stdout
 
     except subprocess.CalledProcessError as e:
         print(f"Error running whisper command: {e}")
         return None
+
 
 if __name__ == '__main__':
     app.run(debug=True)
