@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.startup-container {
+    max-width: 100%;
+    height: 730px;
+    padding: 20px;
+    display: flex;
+    background-image: url(https://seedstars-com.s3.amazonaws.com/images/developperwo-01.max-920x550.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    justify-content: center;
+    align-items: center;
+    background-color: #255FA9;
+    box-shadow: 1px 1px 9px 3px #03171f inset;
+}
+
+.startup-contain {
+    text-align: center;
+    width: 1000px;
+}
+
+.startup-contain h1 {
+    padding: 0px;
+    color: white;
+    margin: 0px 0px 20px 0px;
+}
+
+.startup-contain button {
+    color: #001B48;
+    padding: 15px 30px 15px 30px;
+    background-color: #7fcced;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 9px 2px #3893ba;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.startup-contain button:hover {
+    background-color: #45b6e7;
+}
+
+.startup-contain a {
+    text-decoration: none;
+    color: #03345c;
+}
+
+.startup-features-container {
+    height: 500px;
+    position: relative;
+    background-color: aliceblue;
+}
+
+.startup-heading {
+    margin: 0px;
+    padding: 30px 0px 0px 0px;
+    text-align: center;
+    color: #001B48;
+}
+
+.features-contain {
+    display: flex;
+    padding: 20px 50px 20px 50px;
+    gap: 50px;
+}
+
+.startup-feature1 {
+    background-color: rgb(171, 212, 248);
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    border-radius: 10px 40px 10px 40px;
+    color: #001B48;
+    box-shadow: 1px 1px 9px 2px #001B48;
+}
+
+.startup-feature1 h2,
+.startup-feature2 h2,
+.startup-feature3 h2 {
+    font-size: 2.6rem;
+}
+
+.startup-feature1 p,
+.startup-feature2 p,
+.startup-feature3 p {
+    font-size: 1.5rem;
+}
+
+.startup-feature2 {
+    background-color: rgb(171, 212, 248);
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    border-radius: 10px 40px 10px 40px;
+    color: #001B48;
+    box-shadow: 1px 1px 9px 2px #001B48;
+    position: relative;
+    top: 100px;
+}
+
+.startup-feature3 {
+    background-color: rgb(171, 212, 248);
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    border-radius: 10px 40px 10px 40px;
+    color: #001B48;
+    box-shadow: 1px 1px 9px 2px #001B48;
+}
+
+.startup-img-contain {
+    height: 350px;
+    position: relative;
+}
+
+.startup-img {
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+    z-index: -1;
+
+}
+
+.startup-img-contain h1 {
+    position: relative;
+    bottom: 200px;
+    text-align: center;
+    color: #001B48;
+}

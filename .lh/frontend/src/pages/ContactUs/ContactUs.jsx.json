@@ -1,0 +1,26 @@
+{
+    "sourceFile": "frontend/src/pages/ContactUs/ContactUs.jsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1729078181031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729078194719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             \r\n             <h1>Get in Touch</h1>\r\n             <p>Whether your're an investor looking for exciting opportunities or a startup seeking support,we're here to connect and collaborate.</p>\r\n             <p>Feel free to reach out to us with any questions, inquiries, or partnership ideas.</p>\r\n-            <h3 style={{fontSize=10px}}>Feel free to drop us a line below!</h3>\r\n+            <h3 style={{fontSize=\"10px\"}}>Feel free to drop us a line below!</h3>\r\n             <form>\r\n                 <input type=\"text\" placeholder=\"Enter your Name\"/><br/>\r\n                 <input type=\"text\" placeholder=\"Enter your Email\"/><br/>\r\n                 <textarea rows=\"5\" placeholder=\"Enter your comments here\"></textarea>\r\n"
+                },
+                {
+                    "date": 1729078210786,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             \r\n             <h1>Get in Touch</h1>\r\n             <p>Whether your're an investor looking for exciting opportunities or a startup seeking support,we're here to connect and collaborate.</p>\r\n             <p>Feel free to reach out to us with any questions, inquiries, or partnership ideas.</p>\r\n-            <h3 style={{fontSize=\"10px\"}}>Feel free to drop us a line below!</h3>\r\n+            <h3 style={{fontSize:\"12px\"}}>Feel free to drop us a line below!</h3>\r\n             <form>\r\n                 <input type=\"text\" placeholder=\"Enter your Name\"/><br/>\r\n                 <input type=\"text\" placeholder=\"Enter your Email\"/><br/>\r\n                 <textarea rows=\"5\" placeholder=\"Enter your comments here\"></textarea>\r\n"
+                }
+            ],
+            "date": 1729078181031,
+            "name": "Commit-0",
+            "content": "import React from 'react'\r\nimport './ContactUs.css'\r\nimport call from '../../assets/phone-solid.svg'\r\nimport envelope from '../../assets/envelope-solid.svg'\r\n\r\nfunction ContactUs() {\r\n  return (\r\n    <div className='contact-con'>\r\n    <div className=\"contact-container\">\r\n        <div className=\"contact-main\">\r\n            <h1>Contact Us</h1>\r\n            <ul>\r\n                <li>\r\n                    <img height=\"30px\" width=\"30px\" src={call}/>\r\n                    <p>9324477971</p>\r\n                </li>\r\n                <li>\r\n                    <img height=\"30px\" width=\"30px\" src={envelope}/>\r\n                    <p>investorsdeck@gmail.com</p>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n        <div className=\"contact-form\">\r\n            \r\n            <h1>Get in Touch</h1>\r\n            <p>Whether your're an investor looking for exciting opportunities or a startup seeking support,we're here to connect and collaborate.</p>\r\n            <p>Feel free to reach out to us with any questions, inquiries, or partnership ideas.</p>\r\n            <h3 style={{fontSize=10px}}>Feel free to drop us a line below!</h3>\r\n            <form>\r\n                <input type=\"text\" placeholder=\"Enter your Name\"/><br/>\r\n                <input type=\"text\" placeholder=\"Enter your Email\"/><br/>\r\n                <textarea rows=\"5\" placeholder=\"Enter your comments here\"></textarea>\r\n            </form>\r\n            <button>SEND</button>\r\n        </div>\r\n    </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default ContactUs"
+        }
+    ]
+}

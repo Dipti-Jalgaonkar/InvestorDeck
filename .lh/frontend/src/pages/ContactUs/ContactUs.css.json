@@ -1,0 +1,58 @@
+{
+    "sourceFile": "frontend/src/pages/ContactUs/ContactUs.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1729077998934,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729078011197,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     height: 95vh;\r\n }\r\n \r\n .contact-container {\r\n-    width: 800px;\r\n+    width: 900px;\r\n     height: 600px;\r\n     background-color: white;\r\n     position: relative;\r\n     top: 10px;\r\n"
+                },
+                {
+                    "date": 1729078033313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: rgb(209, 232, 253);\r\n-    height: 95vh;\r\n+    /* height: 95vh; */\r\n }\r\n \r\n .contact-container {\r\n     width: 900px;\r\n"
+                },
+                {
+                    "date": 1729078040044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n     display: flex;\r\n     align-items: center;\r\n     justify-content: center;\r\n     background-color: rgb(209, 232, 253);\r\n-    /* height: 95vh; */\r\n+    \r\n }\r\n \r\n .contact-container {\r\n     width: 900px;\r\n"
+                },
+                {
+                    "date": 1729078055354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .contact-main h1 {\r\n     position: relative;\r\n     left: 60px;\r\n     font-weight: 700;\r\n-    font-size: 3rem;\r\n+    font-size: 2rem;\r\n     padding-bottom: 2rem;\r\n }\r\n \r\n .contact-main ul li p {\r\n"
+                },
+                {
+                    "date": 1729078065817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,9 +53,9 @@\n     left: 50px;\r\n     top: -3.8rem;\r\n     bottom: 30px;\r\n     font-weight: 400;\r\n-    font-size: 1.7rem;\r\n+    font-size: 1rem;\r\n \r\n }\r\n \r\n .contact-main img {\r\n"
+                },
+                {
+                    "date": 1729078083772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .contact-main h1 {\r\n     position: relative;\r\n     left: 60px;\r\n     font-weight: 700;\r\n-    font-size: 2rem;\r\n+    font-size: 3rem;\r\n     padding-bottom: 2rem;\r\n }\r\n \r\n .contact-main ul li p {\r\n@@ -53,9 +53,9 @@\n     left: 50px;\r\n     top: -3.8rem;\r\n     bottom: 30px;\r\n     font-weight: 400;\r\n-    font-size: 1rem;\r\n+    font-size: 1.7rem;\r\n \r\n }\r\n \r\n .contact-main img {\r\n"
+                },
+                {
+                    "date": 1729078103384,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n }\r\n \r\n .contact-form h1 {\r\n     color: #062c64;\r\n-    font-size: 2.8rem;\r\n+    font-size: 2.5rem;\r\n }\r\n \r\n .contact-form p {\r\n     color: #214377;\r\n"
+                },
+                {
+                    "date": 1729078113859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n }\r\n \r\n .contact-form p {\r\n     color: #214377;\r\n-    font-size: 17px;\r\n+    font-size: 1rem;\r\n     font-weight: 500;\r\n     text-align: justify;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1729078225329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -111,9 +111,9 @@\n     margin: 10px;\r\n     padding: 10px 30px 10px 30px;\r\n     background-color: #214377;\r\n     color: aliceblue;\r\n-    font-size: 19px;\r\n+    font-size: 15px;\r\n     border: none;\r\n     border-radius: 20px;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1729078232809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n     box-shadow: 0.5px 0.5px 10px 1px rgb(233, 232, 232);\r\n }\r\n \r\n .contact-form button {\r\n-    margin: 10px;\r\n+    margin: 8px;\r\n     padding: 10px 30px 10px 30px;\r\n     background-color: #214377;\r\n     color: aliceblue;\r\n     font-size: 15px;\r\n"
+                }
+            ],
+            "date": 1729077998934,
+            "name": "Commit-0",
+            "content": ".contact-con {\r\n    margin: 0px;\r\n    padding: 0px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n    background-color: rgb(209, 232, 253);\r\n    height: 95vh;\r\n}\r\n\r\n.contact-container {\r\n    width: 800px;\r\n    height: 600px;\r\n    background-color: white;\r\n    position: relative;\r\n    top: 10px;\r\n    box-shadow: 1px 1px 9px 1px #8888;\r\n    margin-bottom: 5rem;\r\n    margin-top: 3rem;\r\n}\r\n\r\n.contact-main {\r\n    position: absolute;\r\n    left: -120px;\r\n    height: 450px;\r\n    margin: 110px 0px 150px 0px;\r\n    padding: 50px;\r\n    width: 30rem;\r\n    color: aliceblue;\r\n    background-color: #214377;\r\n    text-align: left;\r\n    border-radius: 6%;\r\n    box-shadow: 1px 1px 9px 1px #78869c;\r\n}\r\n\r\n.contact-main ul {\r\n    list-style: none;\r\n}\r\n\r\n.contact-main h1 {\r\n    position: relative;\r\n    left: 60px;\r\n    font-weight: 700;\r\n    font-size: 3rem;\r\n    padding-bottom: 2rem;\r\n}\r\n\r\n.contact-main ul li p {\r\n    padding: 7px 10px 0px 8px;\r\n    margin: 0px;\r\n    display: inline-block;\r\n    position: relative;\r\n    left: 50px;\r\n    top: -3.8rem;\r\n    bottom: 30px;\r\n    font-weight: 400;\r\n    font-size: 1.7rem;\r\n\r\n}\r\n\r\n.contact-main img {\r\n    border: 1px solid white;\r\n    padding: 7px;\r\n    height: 2.8rem;\r\n    width: 2.8rem;\r\n    margin: 10px 0px 10px 0px;\r\n    background-color: aliceblue;\r\n    border-radius: 20%;\r\n}\r\n\r\n.contact-form {\r\n    position: absolute;\r\n    right: 50px;\r\n    width: 450px;\r\n    height: 500px;\r\n    margin: 20px 0px 20px 0px;\r\n    padding: 0px 25px 00px 40px;\r\n    text-align: left;\r\n}\r\n\r\n.contact-form h1 {\r\n    color: #062c64;\r\n    font-size: 2.8rem;\r\n}\r\n\r\n.contact-form p {\r\n    color: #214377;\r\n    font-size: 17px;\r\n    font-weight: 500;\r\n    text-align: justify;\r\n}\r\n\r\n.contact-form h3 {\r\n    color: rgb(112, 146, 152);\r\n    font-weight: 600;\r\n}\r\n\r\n.contact-form input,\r\n.contact-form textarea {\r\n    width: 360px;\r\n    padding: 10px;\r\n    margin: 8px 0px 10px 0px;\r\n    border-radius: 5px;\r\n    border: 1px solid rgb(180, 177, 177);\r\n    color: rgb(198, 196, 196);\r\n    background-color: rgb(255, 255, 255);\r\n    box-shadow: 0.5px 0.5px 10px 1px rgb(233, 232, 232);\r\n}\r\n\r\n.contact-form button {\r\n    margin: 10px;\r\n    padding: 10px 30px 10px 30px;\r\n    background-color: #214377;\r\n    color: aliceblue;\r\n    font-size: 19px;\r\n    border: none;\r\n    border-radius: 20px;\r\n}\r\n\r\n.contact-form button:hover {\r\n    background-color: #153055;\r\n}"
+        }
+    ]
+}

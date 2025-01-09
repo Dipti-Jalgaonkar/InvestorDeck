@@ -1,0 +1,38 @@
+{
+    "sourceFile": "frontend/src/components/Card/Card.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1729076693113,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729076708065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     /* height: 700px; */\r\n     width: 80%;\r\n     display: flex;\r\n     flex-direction: row;\r\n-    gap: 60px;\r\n+    gap: 20px;\r\n     justify-content: center;\r\n     background-color: #D6E7EE;\r\n     padding-top: 2rem;\r\n     padding-bottom: 7rem;\r\n"
+                },
+                {
+                    "date": 1729076830445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n }\r\n \r\n #cardcard-container {\r\n     /* height: 700px; */\r\n-    width: 80%;\r\n+    width: 100%;\r\n     display: flex;\r\n     flex-direction: row;\r\n-    gap: 20px;\r\n+    gap: 60px;\r\n     justify-content: center;\r\n     background-color: #D6E7EE;\r\n     padding-top: 2rem;\r\n     padding-bottom: 7rem;\r\n"
+                },
+                {
+                    "date": 1729077440837,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n     font-size: 3rem;\r\n }\r\n \r\n .cardcard-h1text p {\r\n-    font-size: 1.6rem;\r\n+    font-size: 1rem;\r\n     /* text-align: center; */\r\n     width: 95rem;\r\n     margin-left: 10rem;\r\n }\r\n"
+                },
+                {
+                    "date": 1729077454347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n }\r\n \r\n .cardcard-h1text p {\r\n     font-size: 1rem;\r\n-    /* text-align: center; */\r\n+    text-align: center;\r\n     width: 95rem;\r\n     margin-left: 10rem;\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1729077482163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,11 +32,9 @@\n }\r\n \r\n .cardcard-h1text p {\r\n     font-size: 1rem;\r\n-    text-align: center;\r\n-    width: 95rem;\r\n-    margin-left: 10rem;\r\n+    \r\n }\r\n \r\n #cardinvestor {\r\n     flex: 1 1 0;\r\n"
+                }
+            ],
+            "date": 1729076693113,
+            "name": "Commit-0",
+            "content": "@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');\r\n\r\nbody {\r\n    margin: 0px;\r\n    padding: 0px;\r\n    color: #D6E7EE;\r\n    font-family: 'Roboto', sans-serif;\r\n}\r\n\r\n#cardcard-container {\r\n    /* height: 700px; */\r\n    width: 80%;\r\n    display: flex;\r\n    flex-direction: row;\r\n    gap: 60px;\r\n    justify-content: center;\r\n    background-color: #D6E7EE;\r\n    padding-top: 2rem;\r\n    padding-bottom: 7rem;\r\n\r\n}\r\n\r\n.cardcard-h1text {\r\n    background-color: #D6E7EE;\r\n    color: #001B48;\r\n    padding: 5rem 2rem 2rem 2rem;\r\n    text-align: center;\r\n}\r\n\r\n.cardcard-h1text h1 {\r\n    font-size: 3rem;\r\n}\r\n\r\n.cardcard-h1text p {\r\n    font-size: 1.6rem;\r\n    /* text-align: center; */\r\n    width: 95rem;\r\n    margin-left: 10rem;\r\n}\r\n\r\n#cardinvestor {\r\n    flex: 1 1 0;\r\n    padding: 50px 50px 50px 50px;\r\n    box-shadow: 3px 3px 8px 2px #a5a5a5;\r\n    margin: 0px 0px 0px 150px;\r\n    background: linear-gradient(to right, #023c7b, #0c5c9d);\r\n    border-radius: 20px;\r\n    color: azure;\r\n}\r\n\r\n#cardinvestor h2 {\r\n    font-size: 40px;\r\n    padding: 0px;\r\n    margin: 40px 0px 0px 0px;\r\n}\r\n\r\n#cardinvestor p {\r\n    padding: 0px;\r\n    margin: 30px 0px 0px 0px;\r\n    font-size: 20px;\r\n}\r\n\r\n#cardinvestor button {\r\n    padding: 20px 70px 20px 70px;\r\n    background-color: #346eca;\r\n    border: none;\r\n    border-radius: 10px;\r\n    margin: 50px 0px 0px 0px;\r\n    transition: backgroundcolor 0.5s;\r\n}\r\n\r\n#cardinvestor button:hover {\r\n    background-color: #175dcf;\r\n}\r\n\r\n#cardinvestor a {\r\n    text-decoration: none;\r\n    color: #D6E7EE;\r\n    font-size: 18px;\r\n}\r\n\r\n.cardinvestor-icon {\r\n    height: 100px;\r\n    width: 100px;\r\n    object-fit: contain;\r\n    margin: 10px 0px 0px 0px;\r\n}\r\n\r\n\r\n\r\n#cardstartup {\r\n    flex: 1 1 0;\r\n    padding: 60px 60px 60px 60px;\r\n    box-shadow: 3px 3px 8px 2px #a5a5a5;\r\n    margin: 00px 150px 0px 0px;\r\n    background: linear-gradient(to right, #023c7b, #0c5c9d);\r\n    border-radius: 20px;\r\n    color: azure;\r\n}\r\n\r\n#cardstartup h2 {\r\n    font-size: 40px;\r\n    padding: 0px;\r\n    margin: 40px 0px 0px 0px;\r\n}\r\n\r\n#cardstartup p {\r\n    padding: 0px;\r\n    margin: 20px 0px 0px 0px;\r\n    font-size: 20px;\r\n}\r\n\r\n#cardstartup button {\r\n    padding: 20px 70px 20px 70px;\r\n    background-color: #346eca;\r\n    border: none;\r\n    border-radius: 10px;\r\n    font-size: 15px;\r\n    margin: 40px 0px 0px 0px;\r\n    transition: backgroundcolor 0.5s;\r\n\r\n}\r\n\r\n#cardstartup button:hover {\r\n    background-color: #175dcf;\r\n}\r\n\r\n#cardstartup a {\r\n    text-decoration: none;\r\n    color: #D6E7EE;\r\n    font-size: 18px;\r\n}\r\n\r\n.cardstartup-icon {\r\n    height: 100px;\r\n    width: 100px;\r\n    object-fit: contain;\r\n    margin: 10px 0px 0px 0px;\r\n}"
+        }
+    ]
+}

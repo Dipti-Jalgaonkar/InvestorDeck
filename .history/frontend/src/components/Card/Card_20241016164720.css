@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #D6E7EE;
+    font-family: 'Roboto', sans-serif;
+}
+
+#cardcard-container {
+    /* height: 700px; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    background-color: #D6E7EE;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
+
+}
+
+.cardcard-h1text {
+    background-color: #D6E7EE;
+    color: #001B48;
+    padding: 5rem 2rem 2rem 2rem;
+    text-align: center;
+}
+
+.cardcard-h1text h1 {
+    font-size: 3rem;
+}
+
+.cardcard-h1text p {
+    font-size: 1rem;
+    /* text-align: center; */
+    width: 95rem;
+    margin-left: 10rem;
+}
+
+#cardinvestor {
+    flex: 1 1 0;
+    padding: 50px 50px 50px 50px;
+    box-shadow: 3px 3px 8px 2px #a5a5a5;
+    margin: 0px 0px 0px 150px;
+    background: linear-gradient(to right, #023c7b, #0c5c9d);
+    border-radius: 20px;
+    color: azure;
+}
+
+#cardinvestor h2 {
+    font-size: 40px;
+    padding: 0px;
+    margin: 40px 0px 0px 0px;
+}
+
+#cardinvestor p {
+    padding: 0px;
+    margin: 30px 0px 0px 0px;
+    font-size: 20px;
+}
+
+#cardinvestor button {
+    padding: 20px 70px 20px 70px;
+    background-color: #346eca;
+    border: none;
+    border-radius: 10px;
+    margin: 50px 0px 0px 0px;
+    transition: backgroundcolor 0.5s;
+}
+
+#cardinvestor button:hover {
+    background-color: #175dcf;
+}
+
+#cardinvestor a {
+    text-decoration: none;
+    color: #D6E7EE;
+    font-size: 18px;
+}
+
+.cardinvestor-icon {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    margin: 10px 0px 0px 0px;
+}
+
+
+
+#cardstartup {
+    flex: 1 1 0;
+    padding: 60px 60px 60px 60px;
+    box-shadow: 3px 3px 8px 2px #a5a5a5;
+    margin: 00px 150px 0px 0px;
+    background: linear-gradient(to right, #023c7b, #0c5c9d);
+    border-radius: 20px;
+    color: azure;
+}
+
+#cardstartup h2 {
+    font-size: 40px;
+    padding: 0px;
+    margin: 40px 0px 0px 0px;
+}
+
+#cardstartup p {
+    padding: 0px;
+    margin: 20px 0px 0px 0px;
+    font-size: 20px;
+}
+
+#cardstartup button {
+    padding: 20px 70px 20px 70px;
+    background-color: #346eca;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 40px 0px 0px 0px;
+    transition: backgroundcolor 0.5s;
+
+}
+
+#cardstartup button:hover {
+    background-color: #175dcf;
+}
+
+#cardstartup a {
+    text-decoration: none;
+    color: #D6E7EE;
+    font-size: 18px;
+}
+
+.cardstartup-icon {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    margin: 10px 0px 0px 0px;
+}

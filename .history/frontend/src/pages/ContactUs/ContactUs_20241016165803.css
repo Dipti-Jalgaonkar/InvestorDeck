@@ -1,0 +1,122 @@
+.contact-con {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(209, 232, 253);
+    
+}
+
+.contact-container {
+    width: 900px;
+    height: 600px;
+    background-color: white;
+    position: relative;
+    top: 10px;
+    box-shadow: 1px 1px 9px 1px #8888;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+}
+
+.contact-main {
+    position: absolute;
+    left: -120px;
+    height: 450px;
+    margin: 110px 0px 150px 0px;
+    padding: 50px;
+    width: 30rem;
+    color: aliceblue;
+    background-color: #214377;
+    text-align: left;
+    border-radius: 6%;
+    box-shadow: 1px 1px 9px 1px #78869c;
+}
+
+.contact-main ul {
+    list-style: none;
+}
+
+.contact-main h1 {
+    position: relative;
+    left: 60px;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact-main ul li p {
+    padding: 7px 10px 0px 8px;
+    margin: 0px;
+    display: inline-block;
+    position: relative;
+    left: 50px;
+    top: -3.8rem;
+    bottom: 30px;
+    font-weight: 400;
+    font-size: 1.7rem;
+
+}
+
+.contact-main img {
+    border: 1px solid white;
+    padding: 7px;
+    height: 2.8rem;
+    width: 2.8rem;
+    margin: 10px 0px 10px 0px;
+    background-color: aliceblue;
+    border-radius: 20%;
+}
+
+.contact-form {
+    position: absolute;
+    right: 50px;
+    width: 450px;
+    height: 500px;
+    margin: 20px 0px 20px 0px;
+    padding: 0px 25px 00px 40px;
+    text-align: left;
+}
+
+.contact-form h1 {
+    color: #062c64;
+    font-size: 2.8rem;
+}
+
+.contact-form p {
+    color: #214377;
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.contact-form h3 {
+    color: rgb(112, 146, 152);
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 360px;
+    padding: 10px;
+    margin: 8px 0px 10px 0px;
+    border-radius: 5px;
+    border: 1px solid rgb(180, 177, 177);
+    color: rgb(198, 196, 196);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0.5px 0.5px 10px 1px rgb(233, 232, 232);
+}
+
+.contact-form button {
+    margin: 10px;
+    padding: 10px 30px 10px 30px;
+    background-color: #214377;
+    color: aliceblue;
+    font-size: 19px;
+    border: none;
+    border-radius: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #153055;
+}
